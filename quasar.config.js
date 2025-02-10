@@ -34,7 +34,7 @@ module.exports = configure(function (/* ctx */) {
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
-      // 'ionicons-v4',
+      'ionicons-v4',
       // 'mdi-v5',
       'fontawesome-v6',
       // 'eva-icons',
@@ -91,10 +91,24 @@ module.exports = configure(function (/* ctx */) {
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
     framework: {
-      config: {},
+      config: {
+        // lang: 'pt-BR',
+        // brand: {
+        //   primary: '#41B883',
+        //   secondary: '#34495E',
+        //   accent: '#9C27B0',
+
+        //   dark: '#1d1d1d',
+
+        //   positive: '#21BA45',
+        //   negative: '#C10015',
+        //   info: '#31CCEC',
+        //   warning: '#F2C037'
+        // }
+      },
 
       // iconSet: 'material-icons', // Quasar icon set
-      // lang: 'en-US', // Quasar language pack
+      // lang: 'pt-BR', // Quasar language pack
 
       // For special cases outside of where the auto-import strategy can have an impact
       // (like functional components as one of the examples),
