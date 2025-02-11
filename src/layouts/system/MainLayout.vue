@@ -402,7 +402,7 @@
       </div>
     </q-drawer>
 
-    <q-page-container class="q-pa-md q-ml-md q-mt-md">
+    <q-page-container class="q-pa-md q-ml-md q-mt-lg">
       <router-view />
     </q-page-container>
   </q-layout>
@@ -471,7 +471,7 @@ export default defineComponent({
 
 <style>
 /* FONT AWESOME GENERIC BEAT */
-.fa-beat {
+/* .fa-beat {
   animation: fa-beat 5s ease infinite;
 }
 
@@ -500,5 +500,5 @@ export default defineComponent({
   70% {
     transform: scale(1);
   }
-}
+} */
 </style>
