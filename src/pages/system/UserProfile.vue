@@ -73,7 +73,7 @@
         <q-card class="card-bg text-white no-shadow" bordered>
           <q-card-section class="text-center bg-transparent">
             <q-avatar size="100px" class="shadow-10">
-              <img src="profile.svg">
+              <img src="/system/profile.svg">
             </q-avatar>
             <div class="text-subtitle2 q-mt-lg">by Pratik Patel</div>
             <div class="text-h6 q-mt-md">Pratik Patel</div>

@@ -5,7 +5,7 @@
         <q-card class="login-form" v-bind:style="$q.platform.is.mobile?{'width': '60%'}:{'width':'20%'}">
           <q-card-section>
             <q-avatar size="74px" class="absolute-center shadow-10">
-              <img src="profile.svg">
+              <img src="/system/profile.svg">
             </q-avatar>
           </q-card-section>
           <q-card-section class="q-mt-md">
@@ -51,7 +51,7 @@ export default defineComponent({
 
 <style>
 .bg-image {
-  background-image: url("../assets/background.jpg");
+  background-image: url("../assets/system/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

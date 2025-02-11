@@ -286,7 +286,7 @@
           <q-carousel-slide :name="1" class="q-pa-none">
             <q-scroll-area class="fit">
               <q-card class="my-card">
-                <img src="../assets/coding.jpeg"/>
+                <img src="../../assets/system/coding.jpeg"/>
 
                 <q-card-section>
                   <div class="text-h6">Work with something that you like, like…</div>
@@ -303,7 +303,7 @@
           <q-carousel-slide :name="2" class="q-pa-none">
             <q-scroll-area class="fit">
               <q-card class="my-card">
-                <img src="../assets/lookgood.jpeg"/>
+                <img src="../../assets/system/lookgood.jpeg"/>
 
                 <q-card-section>
                   <div class="text-h6">Keep your schedule in the right time</div>
@@ -322,7 +322,7 @@
           <q-carousel-slide :name="3" class="q-pa-none">
             <q-scroll-area class="fit">
               <q-card class="my-card">
-                <img src="../assets/trawel.jpeg"/>
+                <img src="../../assets/system/trawel.jpeg"/>
 
                 <q-card-section>
                   <div class="text-h6">Travel everytime that you have a chance</div>
@@ -422,7 +422,7 @@ const sales_data = [
     product_name: "Woman Bag",
     total: "$300,00",
     code: "QWE123",
-    prod_img: new URL("../assets/bag.jpg", import.meta.url).href
+    prod_img: new URL("../../assets/system/bag.jpg", import.meta.url).href
   },
   {
     name: "Mayank Patel",
@@ -434,7 +434,7 @@ const sales_data = [
     product_name: "Laptop",
     total: "$230,00",
     code: "ABC890",
-    prod_img: new URL("../assets/laptop.jpg", import.meta.url).href
+    prod_img: new URL("../../assets/system/laptop.jpg", import.meta.url).href
   },
   {
     name: "Mayur Patel",
@@ -446,7 +446,7 @@ const sales_data = [
     total: "$34,00",
     date: "19 Sept 2020",
     code: "GHI556",
-    prod_img: new URL("../assets/jam.jpg", import.meta.url).href
+    prod_img: new URL("../../assets/system/jam.jpg", import.meta.url).href
   },
   {
     name: "Jeff Galbraith",
@@ -458,7 +458,7 @@ const sales_data = [
     total: "$208,00",
     date: "19 Sept 2020",
     code: "JKL345",
-    prod_img: new URL("../assets/action.jpg", import.meta.url).href
+    prod_img: new URL("../../assets/system/action.jpg", import.meta.url).href
   }
 ];
 const sales_column = [
@@ -492,7 +492,7 @@ const sales_column = [
 export default defineComponent({
   name: "Dashboard2",
   components: {
-    CardSocial: defineAsyncComponent(() => import("components/cards/CardSocial.vue")),
+    CardSocial: defineAsyncComponent(() => import("components/system/cards/CardSocial.vue")),
     ECharts
   },
   setup() {

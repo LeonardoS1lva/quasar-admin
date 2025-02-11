@@ -26,13 +26,13 @@ import {defineComponent,defineAsyncComponent} from 'vue'
 export default defineComponent({
   name: 'PageIndex',
   components: {
-    CardSocial: defineAsyncComponent(() => import('components/cards/CardSocial.vue')),
-    CardCharts: defineAsyncComponent(() => import('components/cards/CardCharts.vue')),
-    TabSocial: defineAsyncComponent(() => import('components/tabs/TabSocial.vue')),
-    CardWithImage: defineAsyncComponent(() => import('components/cards/CardWithImage.vue')),
-    CardTimeLine: defineAsyncComponent(() => import('components/cards/CardTimeLine.vue')),
-    TodoList: defineAsyncComponent(() => import('components/list/TodoList.vue')),
-    TableVisits: defineAsyncComponent(() => import('components/tables/TableVisits.vue')),
+    CardSocial: defineAsyncComponent(() => import('components/system/cards/CardSocial.vue')),
+    CardCharts: defineAsyncComponent(() => import('components/system/cards/CardCharts.vue')),
+    TabSocial: defineAsyncComponent(() => import('components/system/tabs/TabSocial.vue')),
+    CardWithImage: defineAsyncComponent(() => import('components/system/cards/CardWithImage.vue')),
+    CardTimeLine: defineAsyncComponent(() => import('components/system/cards/CardTimeLine.vue')),
+    TodoList: defineAsyncComponent(() => import('components/system/list/TodoList.vue')),
+    TableVisits: defineAsyncComponent(() => import('components/system/tables/TableVisits.vue')),
   },
   setup() {
     return {

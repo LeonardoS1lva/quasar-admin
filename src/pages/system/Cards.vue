@@ -64,12 +64,12 @@ import {defineComponent, defineAsyncComponent} from 'vue'
 export default defineComponent({
   name: "Cards",
   components: {
-    CardItem: defineAsyncComponent(() => import('components/cards/CardItem.vue')),
-    CardCafe: defineAsyncComponent(() => import('components/cards/CardCafe.vue')),
-    CardCompany: defineAsyncComponent(() => import('components/cards/CardCompany.vue')),
-    CardProfileDark: defineAsyncComponent(() => import('components/cards/CardProfileDark.vue')),
-    CardProfile: defineAsyncComponent(() => import('components/cards/CardProfile.vue')),
-    BasicCard: defineAsyncComponent(() => import('components/cards/CardBasic.vue'))
+    CardItem: defineAsyncComponent(() => import('components/system/cards/CardItem.vue')),
+    CardCafe: defineAsyncComponent(() => import('components/system/cards/CardCafe.vue')),
+    CardCompany: defineAsyncComponent(() => import('components/system/cards/CardCompany.vue')),
+    CardProfileDark: defineAsyncComponent(() => import('components/system/cards/CardProfileDark.vue')),
+    CardProfile: defineAsyncComponent(() => import('components/system/cards/CardProfile.vue')),
+    BasicCard: defineAsyncComponent(() => import('components/system/cards/CardBasic.vue'))
   },
   setup() {
     const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';

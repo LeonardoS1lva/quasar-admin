@@ -409,7 +409,7 @@
 </template>
 
 <script>
-import EssentialLink from "components/EssentialLink.vue";
+import EssentialLink from "src/components/system/EssentialLink.vue";
 import Messages from "./Messages.vue";
 
 import { defineComponent, ref, watch } from "vue";
