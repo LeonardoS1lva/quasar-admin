@@ -507,7 +507,7 @@ import { defineComponent, ref, watch } from "vue";
 import { useQuasar } from "quasar";
 import languages from "quasar/lang/index.json";
 
-const modules = import.meta.glob("../../node_modules/quasar/lang/*.js");
+const modules = import.meta.glob("../../../node_modules/quasar/lang/*.js");
 
 const appLanguages = languages.filter((lang) =>
   ["en-US", "de", "es", "fr", "ru", "ko", "pt-BR"].includes(lang.isoName)
@@ -533,13 +533,13 @@ export default defineComponent({
     const miniState = ref(false);
 
     watch(lang, (val) => {
-      modules[`../../node_modules/quasar/lang/${val}.js`]().then((lang) => {
+      modules[`../../../node_modules/quasar/lang/${val}.js`]().then((lang) => {
         $q.lang.set(lang.default);
       });
     });
 
     return {
-      $q,
+      // $q,
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
