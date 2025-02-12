@@ -11,7 +11,7 @@
         <router-link>Serviços</router-link>
         <router-link>Contato</router-link>
       </nav>
-    </q-header> 
+    </q-header>
     <!-- Header End -->
 
     <!-- Content Page Start -->
@@ -19,15 +19,13 @@
       <router-view />
     </q-page-container>
     <!-- Content Page End -->
-
-    <!-- Footer Start -->
-      <FooterComponent />
-    <!-- Footer End -->
   </q-layout>
+  <!-- Footer Start -->
+  <FooterComponent />
+  <!-- Footer End -->
 </template>
 
 <script>
-
 import FooterComponent from "src/components/site/FooterComponent.vue";
 export default {
   components: {
