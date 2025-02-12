@@ -124,9 +124,9 @@
       >
         <q-list padding class="q-mx-sm">
           <q-item
-            to="/"
+            to="/Dashboard"
             active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
-            :active="verifyRoute('/')"
+            :active="verifyRoute('/Dashboard')"
           >
             <q-item-section avatar>
               <q-icon name="dashboard" />

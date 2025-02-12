@@ -3,7 +3,7 @@ const routes = [
     path: '/system',
     component: () => import('layouts/system/MainLayout.vue'),
     children: [
-      {path: '/dashboard', component: () => import('src/pages/system/Dashboard.vue')},
+      {path: '/Dashboard', component: () => import('src/pages/system/Dashboard.vue')},
       {path: '/Dashboard2', component: () => import('src/pages/system/Dashboard2.vue')},
       {path: '/Profile', component: () => import('src/pages/system/UserProfile.vue')},
       {path: '/Map', component: () => import('src/pages/system/Map.vue')},
