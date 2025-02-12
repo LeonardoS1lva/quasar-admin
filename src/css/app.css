@@ -1,1 +1,5 @@
 /* app global css */
+router-link.link{
+    font-size: 24px;
+    text-decoration: none;
+}

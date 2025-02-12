@@ -1,9 +1,9 @@
 const routes = [
   {
-    path: '/',
+    path: '/system',
     component: () => import('layouts/system/MainLayout.vue'),
     children: [
-      {path: '', component: () => import('src/pages/system/Dashboard.vue')},
+      {path: '/dashboard', component: () => import('src/pages/system/Dashboard.vue')},
       {path: '/Dashboard2', component: () => import('src/pages/system/Dashboard2.vue')},
       {path: '/Profile', component: () => import('src/pages/system/UserProfile.vue')},
       {path: '/Map', component: () => import('src/pages/system/Map.vue')},
@@ -56,6 +56,16 @@ const routes = [
   {
     path: '/Lock-2',
     component: () => import('src/pages/system/LockScreen-2.vue')
+  },
+  
+  // Routers Site
+  {
+    path: '/',
+    component: () => import('layouts/site/MainLayout.vue'),
+    children: [
+      { path : '', component: () => import('src/pages/site/Home.vue') },
+    ]
+    
   }
 ]
 
