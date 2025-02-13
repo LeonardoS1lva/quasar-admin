@@ -1,63 +1,86 @@
 <template>
-        <q-card class="my-card" flat bordered>
-      <q-img src="https://cdn.quasar.dev/img/chicken-salad.jpg" />
-
-      <q-card-section>
-        <q-btn
-          fab
-          color="primary"
-          icon="place"
-          class="absolute"
-          style="top: 0; right: 12px; transform: translateY(-50%);"
-        />
-
-        <div class="row no-wrap items-center">
-          <div class="col text-h6 ellipsis">
-            Cafe Basilico
-          </div>
-          <div class="col-auto text-grey text-caption q-pt-md row no-wrap items-center">
-            <q-icon name="place" />
-            250 ft
-          </div>
+  <q-card class="my-card q-my-lg" flat>
+    <q-carousel
+      animated
+      v-model="slide"
+      infinite
+      transition-prev="fade"
+      transition-next="fade"
+      transition-duration="500"
+      @mouseenter="nextSlide"
+      @mouseleave="prevSlide"
+      style="height: 250px"
+    >
+      <q-carousel-slide
+        :name="1"
+        :img-src="imgProject"
+      />
+      <q-carousel-slide :name="2">
+        <div class="flex flex-center fit bg-primary">
+          <q-btn
+            outline
+            round
+            icon="visibility"
+            color="white"
+            class="q-mr-md"
+          />
+          <q-btn :href="linkProject" outline round icon="link" color="white" />
         </div>
+      </q-carousel-slide>
+    </q-carousel>
 
-        <q-rating v-model="stars" :max="5" size="32px" />
-      </q-card-section>
+    <q-card-section>
+      <div class="text-positive text-h6 text-weight-light">
+        Our Changing Planet
+      </div>
+    </q-card-section>
 
-      <q-card-section class="q-pt-none">
-        <div class="text-subtitle1">
-          $・Italian, Cafe
-        </div>
-        <div class="text-caption text-grey">
-          Small plates, salads & sandwiches in an intimate setting.
-        </div>
-      </q-card-section>
-
+    <div class="q-px-md">
       <q-separator />
+    </div>
 
-      <q-card-actions>
-        <q-btn flat round icon="event" />
-        <q-btn flat color="primary">
-          Reserve
-        </q-btn>
-      </q-card-actions>
-    </q-card>
+    <q-card-section class="text-h6">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </q-card-section>
+  </q-card>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 export default {
-  setup () {
+  props: {
+    linkProject: {
+      type: String,
+      default: "#",
+    },
+    imgProject: {
+      type: String,
+      default: "https://cdn.quasar.dev/img/mountains.jpg",
+    },
+  },
+
+  setup() {
+    const slide = ref(1);
+    const nextSlide = () => {
+      slide.value = 2;
+    };
+
+    const prevSlide = () => {
+      slide.value = 1;
+    };
+
     return {
-      stars: ref(4)
-    }
-  }
-}
+      slide,
+      nextSlide,
+      prevSlide,
+    };
+  },
+};
 </script>
 
 <style lang="sass" scoped>
 .my-card
   width: 100%
-  max-width: 300px
+  max-width: 400px
 </style>
