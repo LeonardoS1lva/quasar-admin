@@ -19,14 +19,24 @@
       img-src="../../../assets/site/img/carousel-1.jpg"
     >
       <div class="q-pa-xl row">
-        <h1 class="text-white text-bold q-mb-sm col-8">Pioneers Of Solar And Renewable Energy</h1>
+        <h1 class="text-white text-bold q-mb-sm col-8">
+          Pioneers Of Solar And Renewable Energy
+        </h1>
         <div class="col-4"></div>
         <p class="text-white text-h6 col-7">
           Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
           Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.
         </p>
         <div class="col-5"></div>
-        <q-btn label="Read More" color="positive" unelevated no-caps rounded size="22px" class="q-px-lg text-h4" />
+        <q-btn
+          label="Read More"
+          color="positive"
+          unelevated
+          no-caps
+          rounded
+          size="22px"
+          class="q-px-lg text-h4"
+        />
       </div>
     </q-carousel-slide>
     <q-carousel-slide
@@ -34,14 +44,24 @@
       img-src="../../../assets/site/img/carousel-2.jpg"
     >
       <div class="q-pa-xl row">
-        <h1 class="text-white text-bold q-mb-sm col-8">Pioneers Of Solar And Renewable Energy</h1>
+        <h1 class="text-white text-bold q-mb-sm col-8">
+          Pioneers Of Solar And Renewable Energy
+        </h1>
         <div class="col-4"></div>
         <p class="text-white text-h6 col-7">
           Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
           Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.
         </p>
         <div class="col-5"></div>
-        <q-btn label="Read More" color="positive" unelevated no-caps rounded size="22px" class="q-px-lg text-h4" />
+        <q-btn
+          label="Read More"
+          color="positive"
+          unelevated
+          no-caps
+          rounded
+          size="22px"
+          class="q-px-lg text-h4"
+        />
       </div>
     </q-carousel-slide>
     <q-carousel-slide
@@ -49,14 +69,24 @@
       img-src="../../../assets/site/img/carousel-3.jpg"
     >
       <div class="q-pa-xl row">
-        <h1 class="text-white text-bold q-mb-sm col-8">Pioneers Of Solar And Renewable Energy</h1>
+        <h1 class="text-white text-bold q-mb-sm col-8">
+          Pioneers Of Solar And Renewable Energy
+        </h1>
         <div class="col-4"></div>
         <p class="text-white text-h6 col-7">
           Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
           Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.
         </p>
         <div class="col-5"></div>
-        <q-btn label="Read More" color="positive" unelevated no-caps rounded size="22px" class="q-px-lg text-h4" />
+        <q-btn
+          label="Read More"
+          color="positive"
+          unelevated
+          no-caps
+          rounded
+          size="22px"
+          class="q-px-lg text-h4"
+        />
       </div>
     </q-carousel-slide>
   </q-carousel>
