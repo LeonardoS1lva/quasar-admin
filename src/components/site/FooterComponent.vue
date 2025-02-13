@@ -1,110 +1,141 @@
 <template>
-    <q-page class="bg-dark text-body footer mt-5 pt-5">
-      <q-container class="py-5">
-        <q-row class="q-gutter-md">
-          <q-col cols="12" md="6" lg="3">
-            <q-card class="bg-dark text-white">
-              <q-card-section>
-                <h5 class="text-white mb-4">Address</h5>
-                <p class="mb-2">
-                  <q-icon name="fa fa-map-marker-alt" class="me-3" />123 Street, New York, USA
-                </p>
-                <p class="mb-2">
-                  <q-icon name="fa fa-phone-alt" class="me-3" />+012 345 67890
-                </p>
-                <p class="mb-2">
-                  <q-icon name="fa fa-envelope" class="me-3" />info@example.com
-                </p>
-                <div class="d-flex pt-2">
-                  <q-btn flat round icon="fab fa-twitter" class="btn-outline-light btn-social" />
-                  <q-btn flat round icon="fab fa-facebook-f" class="btn-outline-light btn-social" />
-                  <q-btn flat round icon="fab fa-youtube" class="btn-outline-light btn-social" />
-                  <q-btn flat round icon="fab fa-linkedin-in" class="btn-outline-light btn-social" />
-                </div>
-              </q-card-section>
-            </q-card>
-          </q-col>
-          <q-col cols="12" md="6" lg="3">
-            <q-card class="bg-dark text-white">
-              <q-card-section>
-                <h5 class="text-white mb-4">Quick Links</h5>
-                <q-btn flat label="About Us" class="btn-link" />
-                <q-btn flat label="Contact Us" class="btn-link" />
-                <q-btn flat label="Our Services" class="btn-link" />
-                <q-btn flat label="Terms & Condition" class="btn-link" />
-                <q-btn flat label="Support" class="btn-link" />
-              </q-card-section>
-            </q-card>
-          </q-col>
-          <q-col cols="12" md="6" lg="3">
-            <q-card class="bg-dark text-white">
-              <q-card-section>
-                <h5 class="text-white mb-4">Project Gallery</h5>
-                <q-row class="q-gutter-xs">
-                  <q-col cols="4">
-                    <q-img src="img/gallery-1.jpg" class="rounded" />
-                  </q-col>
-                  <q-col cols="4">
-                    <q-img src="img/gallery-2.jpg" class="rounded" />
-                  </q-col>
-                  <q-col cols="4">
-                    <q-img src="img/gallery-3.jpg" class="rounded" />
-                  </q-col>
-                  <q-col cols="4">
-                    <q-img src="img/gallery-4.jpg" class="rounded" />
-                  </q-col>
-                  <q-col cols="4">
-                    <q-img src="img/gallery-5.jpg" class="rounded" />
-                  </q-col>
-                  <q-col cols="4">
-                    <q-img src="img/gallery-6.jpg" class="rounded" />
-                  </q-col>
-                </q-row>
-              </q-card-section>
-            </q-card>
-          </q-col>
-          <q-col cols="12" md="6" lg="3">
-            <q-card class="bg-dark text-white">
-              <q-card-section>
-                <h5 class="text-white mb-4">Newsletter</h5>
-                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                <q-input filled placeholder="Your email" class="border-0 w-100 py-3 ps-4 pe-5">
-                  <template v-slot:append>
-                    <q-btn label="SignUp" color="primary" class="py-2" />
-                  </template>
-                </q-input>
-              </q-card-section>
-            </q-card>
-          </q-col>
-        </q-row>
-      </q-container>
-      <q-container>
-        <q-card class="bg-dark text-white">
-          <q-card-section>
-            <q-row>
-              <q-col cols="12" md="6" class="text-center text-md-start mb-3 mb-md-0">
-                &copy; <a href="#">Your Site Name</a>, All Right Reserved.
-              </q-col>
-              <q-col cols="12" md="6" class="text-center text-md-end">
-                Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                <br />Distributed By:
-                <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-              </q-col>
-            </q-row>
-          </q-card-section>
-        </q-card>
-      </q-container>
-    </q-page>
-  </template>
+  <footer class="bg-custom-footer custom-size text-left q-pt-md">
+    <div class="row text-white flex-wrap q-px-xl">
+      <div class="col-12 col-sm-6 col-md-3">
+        <!-- Section Adress Start -->
+        <h6 class="q-mb-lg">Andress</h6>
+        <p class="q-mb-lg">{{ address.street }}</p>
+        <p class="q-mb-lg">{{ address.number }}</p>
+        <p class="q-mb-lg">{{ address.email }}</p>
+        <section>
+        <!-- Social Links Start -->
+          <div class="d-flex justify-content-center q-gutter-sm">
+            <a href="#" class="text-white">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="#" class="text-white">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="#" class="text-white">
+              <i class="fab fa-twitter fa-2x"></i>
+            </a>
+          </div>
+        <!-- Social Links End -->
+        </section>
+        <!-- Section Adress End -->
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <!-- Quick Links Start -->
+        <h6 class="q-mb-lg">Quick Links</h6>
+        <!-- Links Start -->
+        <p class="q-mb-lg link"><router-link :to="links.aboutLink" >{{ links.aboutLabel }}</router-link></p>
+        <p class="q-mb-lg link"> <router-link :to="links.contactLink">{{ links.contactLabel }}</router-link> </p>
+        <p class="q-mb-lg link"> <router-link :to="links.serviceLink">{{ links.serviceLabel }}</router-link> </p>
+        <p class="q-mb-lg link"> <router-link :to="links.termsLink">{{ links.termsLabel }}</router-link> </p>
+        <p class="q-mb-lg link"> <router-link :to="links.supportLink">{{ links.supportLabel }}</router-link> </p>
+        <!-- Quick Links And Link End -->
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <!-- Section Project Start -->
+        <h6 class="q-mb-lg">Project Gallery</h6>
+        <!-- Projects -->
+        <p>Elena</p>
+        <!-- Section Project End -->
+      </div>
+        <!-- Section Newsletter Start -->
+      <div class="col-12 col-sm-6 col-md-3">
+        <h6 class="q-mb-lg">Newsletter</h6>
+        <p class="q-mb-lg">
+          Dolor amet sit justo amet elitr clita ipsum elitr est.
+        </p>
+        <section class="row items-end">
+          <!-- Your Email -->
+        <q-input label="Your email" class="col-8" color="secondary" input-class="text-custom" label-color="white" ></q-input>
+        <q-btn color="primary" icon="send" @click="onClick" style="height: 10px; width: 40px;"/>
+        </section>
+        <!-- Section Newletter End -->
+      </div>
+    </div>
+    <hr class="q-mt-xl"/>
+    <aside class="text-center q-pa-md">
+      <span
+        ><span class="text-white">&copy;{{ siteName }}</span> ,Todos direitos
+        reservados</span
+      >
+    </aside>
+  </footer>
+</template>
+
+<script>
+export default {
+  name: "FooterComponent",
+  data() {
+    return {
+      siteName: "CPID",
+      address: {
+        street: "Rua Exemplo",
+        number: "+55 (27) 999999999",
+        email: "email@gmail.com",
+      },
+      links:{
+        aboutLabel: "About",
+        aboutLink: "/about",
+
+        contactLabel: "Contact Us",
+        contactLink: "/contact",
+
+        serviceLabel: "Our Service",
+        serviceLink: "/service",
+
+        termsLabel: "Terms & Conditions",
+        termsLink: "/terms",
+
+        supportLabel: "Support",
+        supportLink: "/support",
+      }
+    };
+  },
+  methods: {
+    onClick() {
+      alert("Email enviado com sucesso!");
+    },
+  },
+};
+</script>
+
+<style scoped>
+hr {
+  width: 80%;
+  color: #8a9b9b;
+}
+
+p,span {
+  color: #8a9b9b;
+  transition: color 0.3s, transform 0.5s;
+}
+h6 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.custom-size {
+  width: 100%;
+  height: fit-content;
+}
+.bg-custom-footer {
+  background-color: #1a2a36;
+}
+.text-custom {
+  color: #fff;
+}
+a{
+  color: #8a9b9b;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.link:hover{
+  color: #fff;
+  transform: scale(1.1);
+  transition: 0.3s;
   
-  <script>
-  export default {
-    name: 'FooterComponent',
-  }
-  </script>
-  
-  <style scoped>
-  .footer {
-    animation: fadeIn 0.1s;
-  }
-  </style>
+}
+</style>
