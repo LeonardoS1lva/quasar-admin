@@ -2,11 +2,13 @@
   <footer class="bg-custom-footer custom-size text-left q-pt-md">
     <div class="row text-white flex-wrap q-px-xl">
       <div class="col-12 col-sm-6 col-md-3">
+        <!-- Section Adress Start -->
         <h6 class="q-mb-lg">Andress</h6>
         <p class="q-mb-lg">{{ address.street }}</p>
         <p class="q-mb-lg">{{ address.number }}</p>
         <p class="q-mb-lg">{{ address.email }}</p>
         <section>
+        <!-- Social Links Start -->
           <div class="d-flex justify-content-center q-gutter-sm">
             <a href="#" class="text-white">
               <i class="fab fa-facebook fa-2x"></i>
@@ -18,29 +20,40 @@
               <i class="fab fa-twitter fa-2x"></i>
             </a>
           </div>
+        <!-- Social Links End -->
         </section>
+        <!-- Section Adress End -->
       </div>
       <div class="col-12 col-sm-6 col-md-3">
-        <h6 class="q-mb-lg">Quick Lins</h6>
+        <!-- Quick Links Start -->
+        <h6 class="q-mb-lg">Quick Links</h6>
+        <!-- Links Start -->
         <p class="q-mb-lg link"><router-link :to="links.aboutLink" >{{ links.aboutLabel }}</router-link></p>
         <p class="q-mb-lg link"> <router-link :to="links.contactLink">{{ links.contactLabel }}</router-link> </p>
         <p class="q-mb-lg link"> <router-link :to="links.serviceLink">{{ links.serviceLabel }}</router-link> </p>
         <p class="q-mb-lg link"> <router-link :to="links.termsLink">{{ links.termsLabel }}</router-link> </p>
         <p class="q-mb-lg link"> <router-link :to="links.supportLink">{{ links.supportLabel }}</router-link> </p>
+        <!-- Quick Links And Link End -->
       </div>
       <div class="col-12 col-sm-6 col-md-3">
+        <!-- Section Project Start -->
         <h6 class="q-mb-lg">Project Gallery</h6>
+        <!-- Projects -->
         <p>Elena</p>
+        <!-- Section Project End -->
       </div>
+        <!-- Section Newsletter Start -->
       <div class="col-12 col-sm-6 col-md-3">
         <h6 class="q-mb-lg">Newsletter</h6>
         <p class="q-mb-lg">
           Dolor amet sit justo amet elitr clita ipsum elitr est.
         </p>
         <section class="row items-end">
+          <!-- Your Email -->
         <q-input label="Your email" class="col-8" color="secondary" input-class="text-custom" label-color="white" ></q-input>
         <q-btn color="primary" icon="send" @click="onClick" style="height: 10px; width: 40px;"/>
         </section>
+        <!-- Section Newletter End -->
       </div>
     </div>
     <hr class="q-mt-xl"/>
