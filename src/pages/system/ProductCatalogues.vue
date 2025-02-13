@@ -30,7 +30,8 @@ const data = [
     caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     rating: 2,
     amount: '$30',
-    img: new URL("../../assets/system/products/c-d-x-PDX_a_82obo-unsplash.jpg", import.meta.url),
+    img: 'src/assets/system/products/c-d-x-PDX_a_82obo-unsplash.jpg',
+    // img: new URL("../../assets/system/products/c-d-x-PDX_a_82obo-unsplash.jpg", import.meta.url),
     chip: 'Discount 90%',
     chip_color: 'grey-4',
     chip_class: 'text-blue absolute-top-right'
@@ -40,14 +41,16 @@ const data = [
     caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     rating: 4,
     amount: '$15',
-    img: new URL('../../assets/system/products/frankie-valentine-VghbBAYqUJ0-unsplash.jpg', import.meta.url),
+    img: 'src/assets/system/products/frankie-valentine-VghbBAYqUJ0-unsplash.jpg',
+    // img: new URL('../../assets/system/products/frankie-valentine-VghbBAYqUJ0-unsplash.jpg', import.meta.url),
   },
   {
     title: 'Our Changing Planet',
     caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     rating: 1,
     amount: '$50',
-    img: new URL('../../assets/system/products/giorgio-trovato-K62u25Jk6vo-unsplash.jpg', import.meta.url),
+    img: 'src/assets/system/products/giorgio-trovato-K62u25Jk6vo-unsplash.jpg',
+    // img: new URL('../../assets/system/products/giorgio-trovato-K62u25Jk6vo-unsplash.jpg', import.meta.url),
     chip: 'Sold Out',
     chip_color: 'grey-8',
     chip_class: 'text-white absolute-top-right'
@@ -57,7 +60,8 @@ const data = [
     caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     rating: 5,
     amount: '$70',
-    img: new URL('../../assets/system/products/jeroen-den-otter-iKmm0okt6Q4-unsplash.jpg', import.meta.url),
+    img: 'src/assets/system/products/jeroen-den-otter-iKmm0okt6Q4-unsplash.jpg',
+    // img: new URL('../../assets/system/products/jeroen-den-otter-iKmm0okt6Q4-unsplash.jpg', import.meta.url),
     chip: 'Discount 50%',
     chip_color: 'grey-4',
     chip_class: 'text-blue absolute-top-right'
@@ -67,14 +71,16 @@ const data = [
     caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     rating: 2,
     amount: '$50',
-    img: new URL('../../assets/system/products/john-fornander-m2WpKnlLcEc-unsplash .jpg', import.meta.url),
+    img: 'src/assets/system/products/john-fornander-m2WpKnlLcEc-unsplash.jpg',
+    // img: new URL('../../assets/system/products/john-fornander-m2WpKnlLcEc-unsplash .jpg', import.meta.url),
   },
   {
     title: 'Our Changing Planet',
     caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     rating: 4,
     amount: '$30',
-    img: new URL('../../assets/system/products/marek-szturc-0iIV1goIodE-unsplash.jpg', import.meta.url),
+    img: 'src/assets/system/products/marek-szturc-0iIV1goIodE-unsplash.jpg',
+    // img: new URL('../../assets/system/products/marek-szturc-0iIV1goIodE-unsplash.jpg', import.meta.url),
   },
 ];
 

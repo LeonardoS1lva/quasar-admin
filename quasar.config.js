@@ -93,22 +93,10 @@ module.exports = configure(function (/* ctx */) {
     framework: {
       config: {
         // lang: 'pt-BR',
-        // brand: {
-        //   primary: '#41B883',
-        //   secondary: '#34495E',
-        //   accent: '#9C27B0',
-
-        //   dark: '#1d1d1d',
-
-        //   positive: '#21BA45',
-        //   negative: '#C10015',
-        //   info: '#31CCEC',
-        //   warning: '#F2C037'
-        // }
       },
 
       // iconSet: 'material-icons', // Quasar icon set
-      // lang: 'pt-BR', // Quasar language pack
+      lang: 'pt-BR', // Quasar language pack
 
       // For special cases outside of where the auto-import strategy can have an impact
       // (like functional components as one of the examples),
@@ -119,13 +107,14 @@ module.exports = configure(function (/* ctx */) {
 
       // Quasar plugins
       plugins: [
-        'AppFullscreen'
+        'AppFullscreen',
+        'Notify',
       ]
     },
 
-    // animations: 'all', // --- includes all animations
+    animations: 'all', // --- includes all animations
     // https://v2.quasar.dev/options/animations
-    animations: [],
+    // animations: [],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#property-sourcefiles
     // sourceFiles: {

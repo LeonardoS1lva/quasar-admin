@@ -33,13 +33,15 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue'
+import {defineComponent, ref} from 'vue'
 
 
 export default defineComponent({
   name: 'CardTimeLine',
   setup() {
     return {
+      layout: 'dense',
+      side: 'right',
       timeline_list: [
         {
           title: 'Pratik Likes your product ',

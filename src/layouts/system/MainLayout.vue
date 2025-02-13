@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="q-pa-sm q-mx-lg q-mt-md rounded-borders">
+    <q-header elevated class="q-pa-sm q-mx-lg rounded-borders">
       <q-toolbar>
         <q-btn
           flat
@@ -110,19 +110,24 @@
       :mini="!leftDrawerOpen || miniState"
       @click.capture="drawerClick"
     >
-      <!-- <q-toolbar class="bg-primary text-white">
+      <q-toolbar class="bg-primary text-white sticky-top q-py-md">
         <q-avatar>
-          <img
-            src="../assets/quasar-logo-full.svg"
-          />
+          <img src="../../assets/system/quasar-logo.svg" />
         </q-avatar>
 
         <q-toolbar-title>Quasar Framework</q-toolbar-title>
-      </q-toolbar> -->
+      </q-toolbar>
 
-      <q-scroll-area class="fit" :horizontal-thumb-style="{ opacity: 0 }">
-        <q-list padding>
-          <q-item to="/" active-class="q-item-no-link-highlighting">
+      <q-scroll-area
+        style="height: calc(100% - 70px)"
+        :horizontal-thumb-style="{ opacity: 0 }"
+      >
+        <q-list padding class="q-mx-sm">
+          <q-item
+            to="/Dashboard"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Dashboard')"
+          >
             <q-item-section avatar>
               <q-icon name="dashboard" />
             </q-item-section>
@@ -130,7 +135,11 @@
               <q-item-label>Dashboard</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item to="/Dashboard2" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Dashboard2"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Dashboard2')"
+          >
             <q-item-section avatar>
               <q-icon name="dashboard" />
             </q-item-section>
@@ -140,7 +149,11 @@
           </q-item>
           <q-expansion-item icon="pages" label="Pages">
             <q-list class="q-pl-lg">
-              <q-item to="/Login-1" active-class="q-item-no-link-highlighting">
+              <q-item
+                to="/Login-1"
+                active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+                :active="verifyRoute('/Login-1')"
+              >
                 <q-item-section avatar>
                   <q-icon name="email" />
                 </q-item-section>
@@ -148,7 +161,11 @@
                   <q-item-label>Login-1</q-item-label>
                 </q-item-section>
               </q-item>
-              <q-item to="/Lock" active-class="q-item-no-link-highlighting">
+              <q-item
+                to="/Lock"
+                active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+                :active="verifyRoute('/Lock')"
+              >
                 <q-item-section avatar>
                   <q-icon name="lock" />
                 </q-item-section>
@@ -156,7 +173,11 @@
                   <q-item-label>Lock Screen</q-item-label>
                 </q-item-section>
               </q-item>
-              <q-item to="/Lock-2" active-class="q-item-no-link-highlighting">
+              <q-item
+                to="/Lock-2"
+                active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+                :active="verifyRoute('/Lock-2')"
+              >
                 <q-item-section avatar>
                   <q-icon name="lock" />
                 </q-item-section>
@@ -164,7 +185,11 @@
                   <q-item-label>Lock Screen - 2</q-item-label>
                 </q-item-section>
               </q-item>
-              <q-item to="/Pricing" active-class="q-item-no-link-highlighting">
+              <q-item
+                to="/Pricing"
+                active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+                :active="verifyRoute('/Pricing')"
+              >
                 <q-item-section avatar>
                   <q-icon name="list" />
                 </q-item-section>
@@ -172,10 +197,14 @@
                   <q-item-label>Pricing</q-item-label>
                 </q-item-section>
               </q-item>
-              <q-item-label header class="text-weight-bolder text-white"
-                >Generic</q-item-label
+              <q-item-label header class="text-weight-bolder text-white">
+                Generic
+              </q-item-label>
+              <q-item
+                to="/Profile"
+                active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+                :active="verifyRoute('/Profile')"
               >
-              <q-item to="/Profile" active-class="q-item-no-link-highlighting">
                 <q-item-section avatar>
                   <q-icon name="person" />
                 </q-item-section>
@@ -185,7 +214,8 @@
               </q-item>
               <q-item
                 to="/Maintenance"
-                active-class="q-item-no-link-highlighting"
+                active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+                :active="verifyRoute('/Maintenance')"
               >
                 <q-item-section avatar>
                   <q-icon name="settings" />
@@ -198,7 +228,11 @@
           </q-expansion-item>
           <q-expansion-item icon="map" label="Maps">
             <q-list class="q-pl-lg">
-              <q-item to="/Map" active-class="q-item-no-link-highlighting">
+              <q-item
+                to="/Map"
+                active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+                :active="verifyRoute('/Map')"
+              >
                 <q-item-section avatar>
                   <q-icon name="map" />
                 </q-item-section>
@@ -208,7 +242,8 @@
               </q-item>
               <q-item
                 to="/MapMarker"
-                active-class="q-item-no-link-highlighting"
+                active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+                :active="verifyRoute('/MapMarker')"
               >
                 <q-item-section avatar>
                   <q-icon name="location_on" />
@@ -219,7 +254,8 @@
               </q-item>
               <q-item
                 to="/StreetView"
-                active-class="q-item-no-link-highlighting"
+                active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+                :active="verifyRoute('/StreetView')"
               >
                 <q-item-section avatar>
                   <q-icon name="streetview" />
@@ -231,7 +267,11 @@
             </q-list>
           </q-expansion-item>
 
-          <q-item to="/Mail" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Mail"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Mail')"
+          >
             <q-item-section avatar>
               <q-icon name="email" />
             </q-item-section>
@@ -240,7 +280,11 @@
             </q-item-section>
           </q-item>
 
-          <q-item to="/directory" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/directory"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/directory')"
+          >
             <q-item-section avatar>
               <q-icon name="card_giftcard" />
             </q-item-section>
@@ -249,7 +293,11 @@
             </q-item-section>
           </q-item>
 
-          <q-item to="/TreeTable" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/TreeTable"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/TreeTable')"
+          >
             <q-item-section avatar>
               <q-icon name="list" />
             </q-item-section>
@@ -257,7 +305,11 @@
               <q-item-label>TreeTable</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item to="/Charts" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Charts"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Charts')"
+          >
             <q-item-section avatar>
               <q-icon name="insert_chart" />
             </q-item-section>
@@ -265,7 +317,11 @@
               <q-item-label>Charts</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item to="/Footer" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Footer"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Footer')"
+          >
             <q-item-section avatar>
               <q-icon name="info" />
             </q-item-section>
@@ -273,7 +329,11 @@
               <q-item-label>Footer</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item to="/CardHeader" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/CardHeader"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/CardHeader')"
+          >
             <q-item-section avatar>
               <q-icon name="card_giftcard" />
             </q-item-section>
@@ -281,7 +341,11 @@
               <q-item-label>Card Header</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item to="/Cards" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Cards"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Cards')"
+          >
             <q-item-section avatar>
               <q-icon name="card_giftcard" />
             </q-item-section>
@@ -289,7 +353,11 @@
               <q-item-label>Cards</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item to="/Tables" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Tables"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Tables')"
+          >
             <q-item-section avatar>
               <q-icon name="table_chart" />
             </q-item-section>
@@ -297,7 +365,11 @@
               <q-item-label>Tables</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item to="/Contact" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Contact"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Contact')"
+          >
             <q-item-section avatar>
               <q-icon name="person" />
             </q-item-section>
@@ -305,7 +377,11 @@
               <q-item-label>Contact</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item to="/Checkout" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Checkout"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Checkout')"
+          >
             <q-item-section avatar>
               <q-icon name="check_circle_outline" />
             </q-item-section>
@@ -315,7 +391,11 @@
           </q-item>
 
           <!--        not completed-->
-          <q-item to="/Calendar" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Calendar"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Calendar')"
+          >
             <q-item-section avatar>
               <q-icon name="date_range" />
             </q-item-section>
@@ -325,7 +405,7 @@
           </q-item>
 
           <!--        not completed-->
-          <!--        <q-item to="/Taskboard" active-class="q-item-no-link-highlighting">-->
+          <!--        <q-item to="/Taskboard" active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders">-->
           <!--          <q-item-section avatar>-->
           <!--            <q-icon name="done"/>-->
           <!--          </q-item-section>-->
@@ -334,7 +414,11 @@
           <!--          </q-item-section>-->
           <!--        </q-item>-->
 
-          <q-item to="/Pagination" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Pagination"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Pagination')"
+          >
             <q-item-section avatar>
               <q-icon name="date_range" />
             </q-item-section>
@@ -342,7 +426,11 @@
               <q-item-label>Pagination</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item to="/Ecommerce" active-class="q-item-no-link-highlighting">
+          <q-item
+            to="/Ecommerce"
+            active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            :active="verifyRoute('/Ecommerce')"
+          >
             <q-item-section avatar>
               <q-icon name="shopping_cart" />
             </q-item-section>
@@ -351,7 +439,10 @@
             </q-item-section>
           </q-item>
           <q-expansion-item icon="menu_open" label="Menu Levels">
-            <q-item class="q-ml-xl" active-class="q-item-no-link-highlighting">
+            <q-item
+              class="q-ml-xl"
+              active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
+            >
               <q-item-section>
                 <q-item-label>Level 1</q-item-label>
               </q-item-section>
@@ -360,7 +451,7 @@
               <q-item
                 class="q-ml-xl"
                 style="margin-left: 55px !important"
-                active-class="q-item-no-link-highlighting"
+                active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
               >
                 <q-item-section>
                   <q-item-label>Level 2.1</q-item-label>
@@ -369,7 +460,7 @@
               <q-expansion-item :header-inset-level="1" label="Level 2.2">
                 <q-item
                   style="margin-left: 65px !important"
-                  active-class="q-item-no-link-highlighting"
+                  active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
                 >
                   <q-item-section>
                     <q-item-label>Level 2.2.1</q-item-label>
@@ -377,7 +468,7 @@
                 </q-item>
                 <q-item
                   style="margin-left: 65px !important"
-                  active-class="q-item-no-link-highlighting"
+                  active-class="q-item-no-link-highlighting bg-grey-4 rounded-borders"
                 >
                   <q-item-section>
                     <q-item-label>Level 2.2.2</q-item-label>
@@ -402,7 +493,7 @@
       </div>
     </q-drawer>
 
-    <q-page-container class="q-pa-md q-ml-md q-mt-lg">
+    <q-page-container class="q-pa-md q-ml-md q-mt-md">
       <router-view />
     </q-page-container>
   </q-layout>
@@ -416,7 +507,7 @@ import { defineComponent, ref, watch } from "vue";
 import { useQuasar } from "quasar";
 import languages from "quasar/lang/index.json";
 
-const modules = import.meta.glob("../../node_modules/quasar/lang/*.js");
+const modules = import.meta.glob("../../../node_modules/quasar/lang/*.js");
 
 const appLanguages = languages.filter((lang) =>
   ["en-US", "de", "es", "fr", "ru", "ko", "pt-BR"].includes(lang.isoName)
@@ -442,13 +533,13 @@ export default defineComponent({
     const miniState = ref(false);
 
     watch(lang, (val) => {
-      modules[`../../node_modules/quasar/lang/${val}.js`]().then((lang) => {
+      modules[`../../../node_modules/quasar/lang/${val}.js`]().then((lang) => {
         $q.lang.set(lang.default);
       });
     });
 
     return {
-      $q,
+      // $q,
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
@@ -466,10 +557,15 @@ export default defineComponent({
       },
     };
   },
+  methods: {
+    verifyRoute(route) {
+      return this.$route.path === route;
+    },
+  },
 });
 </script>
 
-<style>
+<style scoped>
 /* FONT AWESOME GENERIC BEAT */
 /* .fa-beat {
   animation: fa-beat 5s ease infinite;
