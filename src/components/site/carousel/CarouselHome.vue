@@ -1,3 +1,34 @@
+<script setup>
+import { ref } from "vue";
+import img1 from "../../../assets/site/img/carousel-1.jpg";
+import img2 from "../../../assets/site/img/carousel-2.jpg";
+import img3 from "../../../assets/site/img/carousel-3.jpg";
+
+const slides = [
+  {
+    imgSrc: img1,
+    title: "Pioneers Of Solar And Renewable Energy",
+    description:
+      "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.",
+  },
+  {
+    imgSrc: img2,
+    title: "Pioneers Of Solar And Renewable Energy",
+    description:
+      "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.",
+  },
+  {
+    imgSrc: img3,
+    title: "Pioneers Of Solar And Renewable Energy",
+    description:
+      "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.",
+  },
+];
+
+const slide = ref(1);
+const autoplay = ref(true);
+</script>
+
 <template>
   <q-carousel
     swipeable
@@ -14,7 +45,7 @@
     @mouseleave="autoplay = true"
     class="window-height"
   >
-  <q-carousel-slide
+    <q-carousel-slide
       v-for="(slide, index) in slides"
       :key="index"
       :name="index + 1"
@@ -34,53 +65,17 @@
         </p>
         <div class="col-5"></div>
         <q-intersection transition="slide-right" transition-duration="500" once>
-            <q-btn
-              label="Read More"
-              color="positive"
-              unelevated
-              no-caps
-              rounded
-              size="22px"
-              class="q-px-lg text-h4"
-            />
+          <q-btn
+            label="Read More"
+            color="positive"
+            unelevated
+            no-caps
+            rounded
+            size="22px"
+            class="q-px-lg text-h4"
+          />
         </q-intersection>
       </div>
     </q-carousel-slide>
   </q-carousel>
 </template>
-
-<script>
-import { ref } from "vue";
-import img1 from "../../../assets/site/img/carousel-1.jpg";
-import img2 from "../../../assets/site/img/carousel-2.jpg";
-import img3 from "../../../assets/site/img/carousel-3.jpg";
-
-export default {
-  setup() {
-
-    const slides = [
-      {
-        imgSrc: img1,
-        title: "Pioneers Of Solar And Renewable Energy",
-        description: "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr."
-      },
-      {
-        imgSrc: img2,
-        title: "Pioneers Of Solar And Renewable Energy",
-        description: "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr."
-      },
-      {
-        imgSrc: img3,
-        title: "Pioneers Of Solar And Renewable Energy",
-        description: "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr."
-      }
-    ];
-
-    return {
-      slide: ref(1),
-      autoplay: ref(true),
-      slides,
-    };
-  },
-};
-</script>

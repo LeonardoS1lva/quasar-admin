@@ -1,3 +1,7 @@
+<script setup>
+import FooterComponent from "src/components/site/FooterComponent.vue";
+</script>
+
 <template>
   <q-layout view="hHr LpR lFf">
     <!-- Header Start -->
@@ -47,14 +51,5 @@
     <FooterComponent />
   </q-layout>
 </template>
-
-<script>
-import FooterComponent from "src/components/site/FooterComponent.vue";
-export default {
-  components: {
-    FooterComponent,
-  },
-};
-</script>
 
 <style src="src/css/site/global.css"></style>
