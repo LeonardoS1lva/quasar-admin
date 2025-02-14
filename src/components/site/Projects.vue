@@ -1,23 +1,35 @@
 <script setup>
 import CardProjects from "./cards/CardProjects.vue";
 import imgAbout from "src/assets/site/img/about.jpg";
+
+const projects = [{}, {}, {}, { imgProject: imgAbout }, {}, {}];
 </script>
 
 <template>
-  <div class="row text-center q-py-lg">
-    <h6 class="no-margin text-positive col-12">Our Projects</h6>
-    <div class="col-3"></div>
-    <h3 class="no-margin col-6">
-      <strong> Visit Our Latest Solar And Renewable Energy Projects </strong>
-    </h3>
-    <div class="col-3"></div>
-  </div>
-  <div class="row flex flex-center q-col-gutter-md">
-    <CardProjects class="col-4" />
-    <CardProjects class="col-4" />
-    <CardProjects class="col-4" />
-    <CardProjects class="col-4" :img-project="imgAbout" />
-    <CardProjects class="col-4" />
-    <CardProjects class="col-4" />
+  <q-intersection transition="slide-up" transition-duration="1500" once>
+    <div class="row text-center q-py-lg">
+      <h6 class="no-margin text-positive col-12">Our Projects</h6>
+      <div class="col-3"></div>
+      <h3 class="no-margin col-6">
+        <strong> Visit Our Latest Solar And Renewable Energy Projects </strong>
+      </h3>
+      <div class="col-3"></div>
+    </div>
+  </q-intersection>
+
+  <div class="row flex flex-center">
+    <div class="col-1"></div>
+    <div class="col-10 row">
+      <div
+        v-for="(project, index) in projects"
+        :key="index"
+        class="col-4 flex flex-center"
+      >
+        <q-intersection transition="slide-up" transition-duration="1500" once>
+          <CardProjects :img-project="project.imgProject" />
+        </q-intersection>
+      </div>
+    </div>
+    <div class="col-1"></div>
   </div>
 </template>

@@ -1,28 +1,51 @@
 <template>
   <q-layout view="hHr LpR lFf">
     <!-- Header Start -->
-    <q-header reveal class="row bg-white shadow-3">
-      <div class="row col-4 q-pa-lg items-center">
-        <span>Logo</span>
+    <q-header reveal class="bg-white shadow-3">
+      <div class="row no-wrap items-center q-pa-lg">
+        <div class="col-4">
+          <span class="text-primary text-h5">Logo</span>
+        </div>
+        <nav class="col-8 row justify-evenly items-center q-gutter-x-xl">
+          <router-link
+            to="#"
+            class="text-primary text-bold text-h6 text-uppercase no-decoration"
+          >
+            Inicio
+          </router-link>
+          <router-link
+            to="#"
+            class="text-primary text-bold text-h6 text-uppercase no-decoration"
+          >
+            Projetos
+          </router-link>
+          <router-link
+            to="#"
+            class="text-primary text-bold text-h6 text-uppercase no-decoration"
+          >
+            Serviços
+          </router-link>
+          <router-link
+            to="#"
+            class="text-primary text-bold text-h6 text-uppercase no-decoration"
+          >
+            Contato
+          </router-link>
+          <router-link
+            to="/Login-1"
+            class="text-primary text-bold text-h6 text-uppercase no-decoration"
+          >
+            Login
+          </router-link>
+        </nav>
       </div>
-      <nav class="row col-8 q-pa-lg justify-evenly items-center q-gutter-x-xl">
-        <router-link>Inicio</router-link>
-        <router-link>Projetos</router-link>
-        <router-link>Serviços</router-link>
-        <router-link>Contato</router-link>
-      </nav>
     </q-header>
-    <!-- Header End -->
 
-    <!-- Content Page Start -->
     <q-page-container>
       <router-view />
     </q-page-container>
-    <!-- Content Page End -->
+    <FooterComponent />
   </q-layout>
-  <!-- Footer Start -->
-  <FooterComponent />
-  <!-- Footer End -->
 </template>
 
 <script>
@@ -34,13 +57,4 @@ export default {
 };
 </script>
 
-<style scoped>
-a {
-  color: #000;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-weight: light;
-}
-</style>
+<style src="src/css/site/global.css"></style>

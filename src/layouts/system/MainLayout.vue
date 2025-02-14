@@ -87,7 +87,7 @@
                   </q-item-section>
                 </q-item>
                 <q-separator />
-                <q-item clickable>
+                <q-item to="/" clickable>
                   <q-item-section avatar>
                     <q-icon name="exit_to_app" />
                   </q-item-section>
@@ -110,6 +110,7 @@
       :mini="!leftDrawerOpen || miniState"
       @click.capture="drawerClick"
     >
+      <!-- <router-link class="no-decoration" to="/Dashboard"> -->
       <q-toolbar class="bg-primary text-white sticky-top q-py-md">
         <q-avatar>
           <img src="../../assets/system/quasar-logo.svg" />
@@ -117,6 +118,7 @@
 
         <q-toolbar-title>Quasar Framework</q-toolbar-title>
       </q-toolbar>
+      <!-- </router-link> -->
 
       <q-scroll-area
         style="height: calc(100% - 70px)"
@@ -565,36 +567,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-/* FONT AWESOME GENERIC BEAT */
-/* .fa-beat {
-  animation: fa-beat 5s ease infinite;
-}
-
-@keyframes fa-beat {
-  0% {
-    transform: scale(1);
-  }
-  5% {
-    transform: scale(1.25);
-  }
-  20% {
-    transform: scale(1);
-  }
-  30% {
-    transform: scale(1);
-  }
-  35% {
-    transform: scale(1.25);
-  }
-  50% {
-    transform: scale(1);
-  }
-  55% {
-    transform: scale(1.25);
-  }
-  70% {
-    transform: scale(1);
-  }
-} */
-</style>
+<style src="src/css/system/global.css" scoped></style>

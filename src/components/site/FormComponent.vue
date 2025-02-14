@@ -33,7 +33,8 @@
                       hint="Name and Lastname"
                       lazy-rules
                       :rules="[
-                        (val) => (val && val.length > 0) || 'Please type something',
+                        (val) =>
+                          (val && val.length > 0) || 'Please type something',
                       ]"
                     />
                   </div>

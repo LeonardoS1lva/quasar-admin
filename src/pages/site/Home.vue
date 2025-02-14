@@ -1,73 +1,36 @@
-<template>
-  <CarouselHome />
-  <!-- <Transition
-    appear
-    enter-active-class="animated slideInRight slower delay-5s repeat-2"
-    leave-active-class="animated slideOutLeft"
-  > -->
-  <Feature />
-  <!-- </Transition> -->
-  <About />
-  <Services />
-  <About2 />
-  <Projects />
-  <FormComponent />
-  <!-- Section Team Start -->
-  <section class="q-py-xl">
-    <h6 class="text-center q-mb-sm">Team member</h6>
-    <h1 class="q-mb-xl q-mt-md text-center">Experienced Team Members</h1>
-    <div class="card-time-container justify-center">
-      <CardTimeComponent />
-      <CardTimeComponent />
-      <CardTimeComponent />
-    </div>
-    <!-- Section Team End -->
-  </section>
-  <!-- Section Testiomonial Start -->
-  <section class="q-py-xl">
-    <h6 class="text-center q-mb-sm">Testimonial</h6>
-    <h1 class="q-mb-xl q-mt-md text-center">What Our Client Say!</h1>
-    <div id="carousel">
-      <CarouselTestimonial />
-    </div>
-  </section>
-  <!-- Section Testimonial End -->
-</template>
-<script>
-import CardTimeComponent from "src/components/site/cards/CardTimeComponent.vue";
-import CarouselTestimonial from "src/components/site/carousel/CarouselTestimonial.vue";
-import About from "src/components/site/About.vue";
-import About2 from "src/components/site/About2.vue";
+<script setup>
 import CarouselHome from "src/components/site/carousel/CarouselHome.vue";
 import Feature from "src/components/site/Feature.vue";
-import FormComponent from "src/components/site/FormComponent.vue";
-import Projects from "src/components/site/Projects.vue";
+import About from "src/components/site/About.vue";
 import Services from "src/components/site/Services.vue";
-
-export default {
-  name: "Home",
-  components: {
-    CardTimeComponent,
-    CarouselTestimonial,
-    About,
-    About2,
-    CarouselHome,
-    Feature,
-    FormComponent,
-    Projects,
-    Services,
-  },
-};
+import About2 from "src/components/site/About2.vue";
+import Projects from "src/components/site/Projects.vue";
+import FormComponent from "src/components/site/FormComponent.vue";
+import Team from "src/components/site/Team.vue";
+import Testimonial from "src/components/site/Testimonial.vue";
 </script>
-<style scoped>
-.card-time-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-#carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</style>
+
+<template>
+  <CarouselHome />
+  <Feature />
+  <q-intersection transition="fade" transition-duration="1000" once>
+    <About />
+  </q-intersection>
+  <Services />
+  <q-intersection transition="fade" transition-duration="1000" once>
+    <About2 />
+  </q-intersection>
+  <Projects />
+  <q-intersection transition="fade" transition-duration="1000" once>
+    <FormComponent />
+  </q-intersection>
+  <Team />
+  <Testimonial />
+  <q-page-scroller
+    position="bottom-right"
+    :scroll-offset="150"
+    :offset="[18, 18]"
+  >
+    <q-btn fab icon="keyboard_arrow_up" color="positive" />
+  </q-page-scroller>
+</template>
