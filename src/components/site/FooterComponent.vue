@@ -28,11 +28,9 @@
         <!-- Quick Links Start -->
         <h6 class="q-mb-lg">Quick Links</h6>
         <!-- Links Start -->
-        <p class="q-mb-lg link"><router-link :to="links.aboutLink" >{{ links.aboutLabel }}</router-link></p>
-        <p class="q-mb-lg link"> <router-link :to="links.contactLink">{{ links.contactLabel }}</router-link> </p>
-        <p class="q-mb-lg link"> <router-link :to="links.serviceLink">{{ links.serviceLabel }}</router-link> </p>
-        <p class="q-mb-lg link"> <router-link :to="links.termsLink">{{ links.termsLabel }}</router-link> </p>
-        <p class="q-mb-lg link"> <router-link :to="links.supportLink">{{ links.supportLabel }}</router-link> </p>
+         <p class="q-mb-lg link" v-for="(link, index) in links" :key="index">
+          <router-link :to="link.to">{{ link.label }}</router-link>
+        </p>
         <!-- Quick Links And Link End -->
       </div>
       <div class="col-12 col-sm-6 col-md-3">
@@ -77,22 +75,13 @@ export default {
         number: "+55 (27) 999999999",
         email: "email@gmail.com",
       },
-      links:{
-        aboutLabel: "About",
-        aboutLink: "/about",
-
-        contactLabel: "Contact Us",
-        contactLink: "/contact",
-
-        serviceLabel: "Our Service",
-        serviceLink: "/service",
-
-        termsLabel: "Terms & Conditions",
-        termsLink: "/terms",
-
-        supportLabel: "Support",
-        supportLink: "/support",
-      }
+      links:[
+        {label: "About", to: "/about"},
+        {label: "Contact Us", to: "/contact"},
+        {label: "Our Service", to: "/service"},
+        {label: "Terms & Conditions", to: "/terms"},
+        {label: "Support", to: "/support"},
+      ]
     };
   },
   methods: {
