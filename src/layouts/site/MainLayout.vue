@@ -1,45 +1,32 @@
 <script setup>
 import FooterComponent from "src/components/site/FooterComponent.vue";
+
+const links = [
+  { text: "Inicio", to: "#" },
+  { text: "Projetos", to: "#" },
+  { text: "Serviços", to: "#" },
+  { text: "Contato", to: "#" },
+  { text: "Login", to: "/Login-1" },
+];
 </script>
 
 <template>
   <q-layout view="hHr LpR lFf">
-    <!-- Header Start -->
     <q-header reveal class="bg-white shadow-3">
       <div class="row no-wrap items-center q-pa-lg">
         <div class="col-4">
-          <span class="text-primary text-h5">Logo</span>
+          <router-link to="/" class="no-decoration">
+            <span class="text-primary text-h5">Logo</span>
+          </router-link>
         </div>
         <nav class="col-8 row justify-evenly items-center q-gutter-x-xl">
           <router-link
-            to="#"
+            v-for="link in links"
+            :key="link.text"
+            :to="link.to"
             class="text-primary text-bold text-h6 text-uppercase no-decoration"
           >
-            Inicio
-          </router-link>
-          <router-link
-            to="#"
-            class="text-primary text-bold text-h6 text-uppercase no-decoration"
-          >
-            Projetos
-          </router-link>
-          <router-link
-            to="#"
-            class="text-primary text-bold text-h6 text-uppercase no-decoration"
-          >
-            Serviços
-          </router-link>
-          <router-link
-            to="#"
-            class="text-primary text-bold text-h6 text-uppercase no-decoration"
-          >
-            Contato
-          </router-link>
-          <router-link
-            to="/Login-1"
-            class="text-primary text-bold text-h6 text-uppercase no-decoration"
-          >
-            Login
+            {{ link.text }}
           </router-link>
         </nav>
       </div>
@@ -48,6 +35,7 @@ import FooterComponent from "src/components/site/FooterComponent.vue";
     <q-page-container>
       <router-view />
     </q-page-container>
+
     <FooterComponent />
   </q-layout>
 </template>

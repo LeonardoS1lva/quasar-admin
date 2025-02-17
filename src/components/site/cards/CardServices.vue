@@ -5,10 +5,10 @@
     <q-card-section>
       <q-btn
         fab
-        color="white"
+        :color="bgIcon"
         :icon="iconCard"
         class="absolute"
-        text-color="positive"
+        :text-color="iconColor"
         style="top: 0; left: 12px; transform: translateY(-50%)"
       />
 
@@ -59,6 +59,14 @@ export default {
     iconCard: {
       type: String,
       default: "star",
+    },
+    bgIcon: {
+      type: String,
+      default: "white",
+    },
+    iconColor: {
+      type: String,
+      default: "positive",
     },
   },
 };

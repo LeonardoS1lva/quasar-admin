@@ -26,6 +26,8 @@ import Testimonial from "src/components/site/Testimonial.vue";
   </q-intersection>
   <Team />
   <Testimonial />
+
+  <!--  Botão de rolagem para o topo da página  -->
   <q-page-scroller
     position="bottom-right"
     :scroll-offset="150"

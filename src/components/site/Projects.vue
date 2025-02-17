@@ -2,7 +2,14 @@
 import CardProjects from "./cards/CardProjects.vue";
 import imgAbout from "src/assets/site/img/about.jpg";
 
-const projects = [{}, {}, {}, { imgProject: imgAbout }, {}, {}];
+const projects = [
+  {},
+  {},
+  {},
+  { imgProject: imgAbout, viewProject: imgAbout },
+  {},
+  {},
+];
 </script>
 
 <template>
@@ -26,7 +33,7 @@ const projects = [{}, {}, {}, { imgProject: imgAbout }, {}, {}];
         class="col-4 flex flex-center"
       >
         <q-intersection transition="slide-up" transition-duration="1500" once>
-          <CardProjects :img-project="project.imgProject" />
+          <CardProjects :img-project="project.imgProject" :view-project="project.viewProject" />
         </q-intersection>
       </div>
     </div>

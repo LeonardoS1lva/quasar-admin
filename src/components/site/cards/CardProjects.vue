@@ -18,6 +18,8 @@
       <q-carousel-slide :name="2">
         <div class="flex flex-center fit bg-primary">
           <q-btn
+            :href="viewProject"
+            target="_blank"
             outline
             round
             icon="visibility"
@@ -50,6 +52,10 @@ import { ref } from "vue";
 
 export default {
   props: {
+    viewProject: {
+      type: String,
+      default: "https://cdn.quasar.dev/img/mountains.jpg",
+    },
     linkProject: {
       type: String,
       default: "#",
