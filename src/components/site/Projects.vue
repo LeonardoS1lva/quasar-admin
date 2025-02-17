@@ -30,7 +30,7 @@ const projects = [
       <div
         v-for="(project, index) in projects"
         :key="index"
-        class="col-4 flex flex-center"
+        class="col-lg-4 col-md-6 col-sm-12 flex flex-center"
       >
         <q-intersection transition="slide-up" transition-duration="1500" once>
           <CardProjects :img-project="project.imgProject" :view-project="project.viewProject" />
