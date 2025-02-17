@@ -2,10 +2,10 @@
 import FooterComponent from "src/components/site/FooterComponent.vue";
 
 const links = [
-  { text: "Inicio", to: "#" },
-  { text: "Projetos", to: "#" },
-  { text: "Serviços", to: "#" },
-  { text: "Contato", to: "#" },
+  { text: "Inicio", to: "#home" },
+  { text: "Serviços", to: "#services" },
+  { text: "Projetos", to: "#projects" },
+  { text: "Contato", to: "#contact" },
   { text: "Login", to: "/Login-1" },
 ];
 </script>
