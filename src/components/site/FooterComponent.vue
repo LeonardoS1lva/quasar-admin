@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-custom-footer custom-size text-left q-pt-md">
+  <footer class="bg-footer text-left q-pt-md">
     <div class="row text-white flex-wrap q-px-xl">
       <div class="col-12 col-sm-6 col-md-3">
         <!-- Section Adress Start -->
@@ -28,11 +28,9 @@
         <!-- Quick Links Start -->
         <h6 class="q-mb-lg">Quick Links</h6>
         <!-- Links Start -->
-        <p class="q-mb-lg link"><router-link :to="links.aboutLink" >{{ links.aboutLabel }}</router-link></p>
-        <p class="q-mb-lg link"> <router-link :to="links.contactLink">{{ links.contactLabel }}</router-link> </p>
-        <p class="q-mb-lg link"> <router-link :to="links.serviceLink">{{ links.serviceLabel }}</router-link> </p>
-        <p class="q-mb-lg link"> <router-link :to="links.termsLink">{{ links.termsLabel }}</router-link> </p>
-        <p class="q-mb-lg link"> <router-link :to="links.supportLink">{{ links.supportLabel }}</router-link> </p>
+         <p class="q-mb-lg link-footer" v-for="(link, index) in links" :key="index">
+          <router-link :to="link.to" class="a-footer">{{ link.label }}</router-link>
+        </p>
         <!-- Quick Links And Link End -->
       </div>
       <div class="col-12 col-sm-6 col-md-3">
@@ -50,13 +48,13 @@
         </p>
         <section class="row items-end">
           <!-- Your Email -->
-        <q-input label="Your email" class="col-8" color="secondary" input-class="text-custom" label-color="white" ></q-input>
+        <q-input label="Your email" class="col-8" color="white" label-color="white" ></q-input>
         <q-btn color="primary" icon="send" @click="onClick" style="height: 10px; width: 40px;"/>
         </section>
         <!-- Section Newletter End -->
       </div>
     </div>
-    <hr class="q-mt-xl"/>
+    <hr class="q-mt-xl separator-footer"/>
     <aside class="text-center q-pa-md">
       <span
         ><span class="text-white">&copy;{{ siteName }}</span> ,Todos direitos
@@ -77,22 +75,13 @@ export default {
         number: "+55 (27) 999999999",
         email: "email@gmail.com",
       },
-      links:{
-        aboutLabel: "About",
-        aboutLink: "/about",
-
-        contactLabel: "Contact Us",
-        contactLink: "/contact",
-
-        serviceLabel: "Our Service",
-        serviceLink: "/service",
-
-        termsLabel: "Terms & Conditions",
-        termsLink: "/terms",
-
-        supportLabel: "Support",
-        supportLink: "/support",
-      }
+      links:[
+        {label: "About", to: "/about"},
+        {label: "Contact Us", to: "/contact"},
+        {label: "Our Service", to: "/service"},
+        {label: "Terms & Conditions", to: "/terms"},
+        {label: "Support", to: "/support"},
+      ]
     };
   },
   methods: {
@@ -104,38 +93,10 @@ export default {
 </script>
 
 <style scoped>
-hr {
-  width: 80%;
-  color: #8a9b9b;
-}
-
-p,span {
+ p,span {
   color: #8a9b9b;
   transition: color 0.3s, transform 0.5s;
 }
-h6 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.custom-size {
-  width: 100%;
-  height: fit-content;
-}
-.bg-custom-footer {
-  background-color: #1a2a36;
-}
-.text-custom {
-  color: #fff;
-}
-a{
-  color: #8a9b9b;
-  text-decoration: none;
-  transition: 0.5s;
-}
-.link:hover{
-  color: #fff;
-  transform: scale(1.1);
-  transition: 0.3s;
-  
-}
+
+
 </style>

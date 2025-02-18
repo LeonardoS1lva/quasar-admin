@@ -2,25 +2,52 @@
    <q-card>
     <q-card-section class="row q-gutter-xl">
             <!-- Image Team Member -->
-        <img src="/src/assets/site/exemple-picture.png" alt="">
+        <img :src="image" alt="Image Team.">
         <div class="column items-center justify-between q-py-md">
             <!-- Social -->
-            <router-link to="#"><i class="fab fa-facebook fa-1x"></i></router-link>
-            <router-link to="#"><i class="fab fa-instagram fa-1x"></i></router-link>
-            <router-link to="#"><i class="fab fa-twitter fa-1x"></i></router-link>
+            <router-link :to="facebookLink"><i class="fab fa-facebook fa-1x"></i></router-link>
+            <router-link :to="instagramLink"><i class="fab fa-instagram fa-1x"></i></router-link>
+            <router-link :to="twitterLink"><i class="fab fa-twitter fa-1x"></i></router-link>
         </div>
     </q-card-section>
     <q-card-section>
             <!-- About Person -->
-        <h5 class="q-my-sm">Full Name</h5>
-        <span>Designation</span>
+        <h5 class="q-my-sm">{{ name }}</h5>
+        <span>{{ designation }}</span>
     </q-card-section>
    </q-card>
 </template>
 <script>
 export default {
-    name: "CardTimeComponent",
-};
+    props:{
+        name:{
+            type: String,
+            required: true
+        }, 
+        image:{
+            type: String,
+            required: true
+        },
+        facebookLink:{
+            type: String,
+            required: true
+        },
+        instagramLink:{
+            type: String,
+            required: true
+        },
+        twitterLink:{
+            type: String,
+            required: true
+        },
+        designation:{
+            type: String,
+            required: true
+        }
+        }
+}
+
+;
 </script>
 <style scoped>
 

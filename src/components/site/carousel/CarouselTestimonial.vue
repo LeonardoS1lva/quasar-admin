@@ -1,5 +1,5 @@
 <template>
-    <div class="q-pa-md carousel">
+    <div class="q-pa-md col-10">
       <div class="q-gutter-md">
         <q-carousel
           v-model="slide"
@@ -56,9 +56,4 @@
   }
   </script>
 
-<style scoped>
-.carousel{
-    width: 80%;
-}
-</style>
   
