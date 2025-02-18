@@ -14,7 +14,12 @@ const projects = [
 
 <template>
   <div>
-    <q-intersection transition="slide-up" transition-duration="1500" once>
+    <q-intersection
+      transition="slide-up"
+      transition-duration="1500"
+      once
+      class="intersection-180"
+    >
       <div class="row text-center q-py-lg">
         <h6 class="no-margin text-positive col-12">Our Projects</h6>
         <div class="col-3"></div>
@@ -35,7 +40,12 @@ const projects = [
           :key="index"
           class="col-lg-4 col-md-6 col-sm-12 flex flex-center"
         >
-          <q-intersection transition="slide-up" transition-duration="1500" once>
+          <q-intersection
+            transition="slide-up"
+            :transition-duration="300 * (index + 1)"
+            once
+            class="intersection-450"
+          >
             <CardProjects
               :img-project="project.imgProject"
               :view-project="project.viewProject"
@@ -47,3 +57,5 @@ const projects = [
     </div>
   </div>
 </template>
+
+<style scoped src="../../css/site/global.css"></style>

@@ -21,6 +21,7 @@ const features = [
         :transition="`scale`"
         :transition-duration="250 * (index + 1)"
         once
+        class="intersection-260"
       >
         <CardFeature
           v-if="feature.icon"
@@ -34,3 +35,5 @@ const features = [
     </div>
   </div>
 </template>
+
+<style scoped src="../../css/site/global.css"></style>

@@ -20,7 +20,12 @@ const services = [
 
 <template>
   <div class="q-py-lg">
-    <q-intersection transition="slide-up" transition-duration="1500" once>
+    <q-intersection
+      transition="slide-up"
+      transition-duration="1500"
+      once
+      class="intersection-180"
+    >
       <div class="row text-center q-py-lg">
         <h6 class="no-margin text-positive col-12">Our Services</h6>
         <div class="col-3"></div>
@@ -38,7 +43,12 @@ const services = [
           :key="index"
           class="col-md-4 col-sm-6 col-xs-12 flex flex-center"
         >
-          <q-intersection transition="slide-up" transition-duration="1000" once>
+          <q-intersection
+            transition="slide-up"
+            :transition-duration="250 * (index + 1)"
+            once
+            class="intersection-370"
+          >
             <CardServices
               :img-card="service.imgCard"
               :icon-card="service.iconCard"
@@ -53,3 +63,5 @@ const services = [
     </div>
   </div>
 </template>
+
+<style scoped src="../../css/site/global.css"></style>

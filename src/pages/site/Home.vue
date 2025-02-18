@@ -11,21 +11,15 @@ import Testimonial from "src/components/site/Testimonial.vue";
 </script>
 
 <template>
-    <CarouselHome id="home"/>
-    <Feature />
-    <q-intersection transition="fade" transition-duration="1000" once>
-      <About id="about" />
-    </q-intersection>
-    <Services id="services" />
-    <q-intersection transition="fade" transition-duration="1000" once>
-      <About2 />
-    </q-intersection>
-    <Projects id="projects" />
-    <q-intersection transition="fade" transition-duration="1000" once>
-      <FormComponent id="contact" />
-    </q-intersection>
-    <Team />
-    <Testimonial />
+  <CarouselHome id="home" />
+  <Feature />
+  <About id="about" />
+  <Services id="services" />
+  <About2 />
+  <Projects id="projects" />
+  <FormComponent id="contact" />
+  <Team />
+  <Testimonial />
 
   <!--  Botão de rolagem para o topo da página  -->
   <q-page-scroller
