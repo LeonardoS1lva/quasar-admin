@@ -22,7 +22,7 @@
               <h3 class="no-margin q-py-md">
                 <strong> Get A Free Quote </strong>
               </h3>
-              <p class="text-grey-7 text-subtitle1 q-pt-md">
+              <p class="text-grey-6 text-subtitle1 q-pt-md">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
                 Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
                 sed stet lorem sit clita duo justo erat amet
@@ -151,5 +151,3 @@ export default {
   },
 };
 </script>
-
-<style scoped src="../../css/site/global.css"></style>

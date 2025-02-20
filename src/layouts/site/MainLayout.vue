@@ -69,5 +69,3 @@ export default {
     }
 };
 </script>
-
-<style src="src/css/site/global.css"></style>

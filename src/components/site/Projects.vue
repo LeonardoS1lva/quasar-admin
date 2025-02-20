@@ -57,5 +57,3 @@ const projects = [
     </div>
   </div>
 </template>
-
-<style scoped src="../../css/site/global.css"></style>

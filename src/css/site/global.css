@@ -1,3 +1,15 @@
+h1 {
+  font-size: 4.5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
 .no-decoration {
   text-decoration: none;
 }
@@ -29,21 +41,47 @@
 .intersection-630 {
   min-height: 630px;
 }
+
+.border-10 {
+  border-radius: 10px;
+}
+
 .bg-footer{
   background-color: #1a2a36;
 }
+
 .separator-footer{
   width: 80%;
   color: #8a9b9b;
 }
+
 .link-footer:hover{
   color: #fff;
   transform: scale(1.1);
   transition: 0.3s;
-  
 }
+
 .a-footer {
   color: #8a9b9b;
   text-decoration: none;
   transition: 0.5s;
 }
+
+.q-carousel .q-carousel__thumbnail {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, .9);
+  transition: 0.7s;
+}
+
+.q-carousel .q-carousel__thumbnail--active {
+  width: 60px;
+  height: 60px;
+}
+
+.q-carousel .q-carousel__thumbnail--inactive {
+  width: 45px;
+  height: 45px;
+}
+

@@ -1,10 +1,27 @@
 <script setup>
 import CardServices from "./cards/CardServices.vue";
 import imgAbout from "../../assets/site/img/about.jpg";
+import img1 from "../../assets/site/img/image1.png";
+import img2 from "../../assets/site/img/image2.png";
+import img4 from "../../assets/site/img/image4.png";
+import img5 from "../../assets/site/img/image5.png";
+import img6 from "../../assets/site/img/image6.png";
 
 const services = [
-  {},
-  {},
+  {
+    imgCard: img1,
+    iconCard: "star",
+    titleCard: "Solar Panels",
+    descriptionCard: "lorem ipsum dolor sit amet consectetur adipiscing elit",
+    labelButton: "Read more",
+  },
+  {
+    imgCard: img2,
+    iconCard: "star",
+    titleCard: "Wind Turbines",
+    descriptionCard: "lorem ipsum dolor sit amet consectetur adipiscing elit",
+    labelButton: "Read more",
+  },
   {
     imgCard: imgAbout,
     iconCard: "lightbulb",
@@ -12,14 +29,32 @@ const services = [
     descriptionCard: "lorem ipsum dolor sit amet consectetur adipiscing elit",
     labelButton: "Read more",
   },
-  {},
-  {},
-  {},
+  {
+    imgCard: img4,
+    iconCard: "star",
+    titleCard: "Solar Panels",
+    descriptionCard: "lorem ipsum dolor sit amet consectetur adipiscing elit",
+    labelButton: "Read more",
+  },
+  {
+    imgCard: img5,
+    iconCard: "star",
+    titleCard: "Wind Turbines",
+    descriptionCard: "lorem ipsum dolor sit amet consectetur adipiscing elit",
+    labelButton: "Read more",
+  },
+  {
+    imgCard: img6,
+    iconCard: "star",
+    titleCard: "Hydropower Plants",
+    descriptionCard: "lorem ipsum dolor sit amet consectetur adipiscing elit",
+    labelButton: "Read more",
+  },
 ];
 </script>
 
 <template>
-  <div class="q-py-lg">
+  <div class="q-py-lg bg-grey-2">
     <q-intersection
       transition="slide-up"
       transition-duration="1500"
@@ -35,13 +70,13 @@ const services = [
         <div class="col-3"></div>
       </div>
     </q-intersection>
-    <div class="row q-col-gutter-lg">
-      <div class="col-md-1"></div>
-      <div class="row col-md-10 q-col-gutter-lg">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="row col-10 q-col-gutter-y-lg">
         <div
           v-for="(service, index) in services"
           :key="index"
-          class="col-md-4 col-sm-6 col-xs-12 flex flex-center"
+          class="col-lg-4 col-md-6 col-xs-12 flex flex-center"
         >
           <q-intersection
             transition="slide-up"
@@ -59,9 +94,7 @@ const services = [
           </q-intersection>
         </div>
       </div>
-      <div class="col-md-1"></div>
+      <div class="col-1"></div>
     </div>
   </div>
 </template>
-
-<style scoped src="../../css/site/global.css"></style>
