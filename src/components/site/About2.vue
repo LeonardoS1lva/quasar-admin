@@ -1,5 +1,28 @@
 <script setup>
 import ListFeature from 'src/components/site/lists/ListFeature.vue'
+
+const features = [
+  {
+    icon: 'fa fa-check',
+    title: 'Quality',
+    subtitle: 'Services',
+  },
+  {
+    icon: 'fa fa-user-check',
+    title: 'Expert',
+    subtitle: 'Workers',
+  },
+  {
+    icon: 'fa fa-drafting-compass',
+    title: 'Free',
+    subtitle: 'Test',
+  },
+  {
+    icon: 'fa fa-headphones',
+    title: 'Customer',
+    subtitle: 'Support',
+  },
+]
 </script>
 
 <template>
@@ -12,9 +35,9 @@ import ListFeature from 'src/components/site/lists/ListFeature.vue'
     <q-card flat class="bg-grey-3">
       <q-card-section class="no-padding">
         <div class="row">
-          <div class="col-12 col-md-6 q-pa-xl row">
-            <div class="col-1"></div>
-            <q-card-section class="q-pa-xl col-11">
+          <div class="col-12 col-md-6 q-py-xl row">
+            <div class="col-1 col-md-2"></div>
+            <q-card-section class="col-10 col-md-9 q-pa-none">
               <h6 class="text-positive no-margin">Why Choose Us!</h6>
               <h3 class="no-margin q-py-md">
                 <strong>
@@ -27,28 +50,16 @@ import ListFeature from 'src/components/site/lists/ListFeature.vue'
                 sed stet lorem sit clita duo justo erat amet
               </p>
               <div class="row q-col-gutter-md q-pt-md">
-                <ListFeature 
-                  icon="fa fa-check"
-                  title="Quality"
-                  subtitle="Services"
-                />
                 <ListFeature
-                  icon="fa fa-user-check"
-                  title="Expert"
-                  subtitle="Workers"
-                />
-                <ListFeature
-                  icon="fa fa-drafting-compass"
-                  title="Free"
-                  subtitle="Consultation"
-                />
-                <ListFeature
-                  icon="fa fa-headphones"
-                  title="Customer"
-                  subtitle="Support"
+                  v-for="(feature, index) in features"
+                  :key="index"
+                  :icon="feature.icon"
+                  :title="feature.title"
+                  :subtitle="feature.subtitle"
                 />
               </div>
             </q-card-section>
+            <div class="col-1"></div>
           </div>
           <div class="col-12 col-md-6">
             <img

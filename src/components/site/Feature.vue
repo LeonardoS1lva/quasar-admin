@@ -18,8 +18,8 @@ const features = [
   <div class="row">
     <div class="col-1"></div>
     <div class="col-10">
-      <div class="flex flex-center q-pb-lg">
-        <div v-for="(feature, index) in features" :key="index">
+      <div class="row justify-center q-pb-lg">
+        <div v-for="(feature, index) in features" :key="index" class="col-md-3 col-sm-6">
           <q-intersection
             :transition="`scale`"
             :transition-duration="250 * (index + 1)"
@@ -32,9 +32,8 @@ const features = [
               :number="feature.number"
               :title="feature.title"
               :description="feature.description"
-              class="q-mx-sm"
             />
-            <CardFeature v-else class="q-mx-sm" />
+            <CardFeature v-else />
           </q-intersection>
         </div>
       </div>

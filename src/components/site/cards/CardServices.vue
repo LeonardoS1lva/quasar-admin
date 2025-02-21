@@ -1,6 +1,6 @@
 <template>
   <q-card class="my-card border-10 hover-card" flat>
-    <q-img :src="imgCard" style="height: 250px; width: 400px" />
+    <q-img :src="imgCard" style="height: 250px;" />
 
     <q-card-section class="q-pt-none">
       <q-avatar

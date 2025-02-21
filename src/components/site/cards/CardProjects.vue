@@ -1,35 +1,20 @@
 <template>
-  <q-card class="my-card q-my-lg" flat>
-    <q-carousel
-      animated
-      v-model="slide"
-      infinite
-      transition-prev="fade"
-      transition-next="fade"
-      transition-duration="500"
-      @mouseenter="nextSlide"
-      @mouseleave="prevSlide"
-      style="height: 250px"
-    >
-      <q-carousel-slide
-        :name="1"
-        :img-src="imgProject"
-      />
-      <q-carousel-slide :name="2">
-        <div class="flex flex-center fit bg-primary">
-          <q-btn
-            :href="viewProject"
-            target="_blank"
-            outline
-            round
-            icon="visibility"
-            color="white"
-            class="q-mr-md"
-          />
-          <q-btn :href="linkProject" outline round icon="link" color="white" />
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
+  <q-card class="my-card border-10 q-my-lg" flat>
+    <img :src="imgProject" style="height: 250px" />
+    <div class="absolute-center bg-blue-grey-7 menu-slide">
+      <div class="flex flex-center full-height opacity-animation">
+        <q-btn
+        :href="viewProject"
+        target="_blank"
+        outline
+        round
+        icon="visibility"
+        color="white"
+        class="q-mr-md"
+        />
+        <q-btn :href="linkProject" outline round icon="link" color="white" />
+      </div>
+    </div>
 
     <q-card-section>
       <div class="text-positive text-h6 text-weight-light">
@@ -65,23 +50,6 @@ export default {
       default: "https://cdn.quasar.dev/img/mountains.jpg",
     },
   },
-
-  setup() {
-    const slide = ref(1);
-    const nextSlide = () => {
-      slide.value = 2;
-    };
-
-    const prevSlide = () => {
-      slide.value = 1;
-    };
-
-    return {
-      slide,
-      nextSlide,
-      prevSlide,
-    };
-  },
 };
 </script>
 
@@ -89,4 +57,24 @@ export default {
 .my-card
   width: 100%
   max-width: 400px
+
+.menu-slide
+  top: 125px
+  z-index: 1
+  opacity: 0
+  width: 0
+  height: 250px
+  transition: width .5s ease, opacity .5s ease
+
+.my-card:hover .menu-slide
+  opacity: 1
+  width: 100%
+
+.opacity-animation
+  opacity: 0
+  transition: opacity .5s ease
+
+.my-card:hover .opacity-animation
+  opacity: 1
+
 </style>

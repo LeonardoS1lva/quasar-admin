@@ -16,45 +16,48 @@
               style="max-height: 600px; object-fit: cover"
             />
           </div>
-          <div class="col-12 col-md-6 q-pl-lg row content-center">
-            <q-card-section class="col-10 q-col-gutter-y-md">
-              <h6 class="text-positive no-margin">About Us</h6>
-              <h3 class="no-margin text-weight-bold">
-                25+ Years Experience In Solar & Renewable Energy Industry
-              </h3>
-              <p class="text-grey-6 text-subtitle1">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                Aliqu diam amet diam eteos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo erat amet ita duo justo erat
-                amet ita.
-              </p>
-              <div>
+          <div class="col-12 col-md-6 content-center">
+            <div class="row">
+              <div class="col-1"></div>
+              <q-card-section class="col-md-9 col-sm-10 col-xs-10 q-col-gutter-y-md">
+                <h6 class="text-positive no-margin">About Us</h6>
+                <h3 class="no-margin text-weight-bold">
+                  25+ Years Experience In Solar & Renewable Energy Industry
+                </h3>
                 <p class="text-grey-6 text-subtitle1">
-                  <i class="fas fa-check-circle text-positive q-pr-sm"></i> High
-                  Quality
+                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+                  Aliqu diam amet diam eteos. Clita erat ipsum et lorem et sit,
+                  sed stet lorem sit clita duo justo erat amet ita duo justo
+                  erat amet ita.
                 </p>
-                <p class="text-grey-6 text-subtitle1">
-                  <i class="fas fa-check-circle text-positive q-pr-sm"></i>
-                  Customer Satisfaction
-                </p>
-                <p class="text-grey-6 text-subtitle1">
-                  <i class="fas fa-check-circle text-positive q-pr-sm"></i>
-                  Innovative Solutions
-                </p>
-              </div>
-              <div>
-                <q-btn
-                  label="Explore More"
-                  color="positive"
-                  no-caps
-                  unelevated
-                  rounded
-                  size="22px"
-                  class="text-weight-regular"
-                />
-              </div>
-            </q-card-section>
-            <div class="col-2"></div>
+                <div>
+                  <p class="text-grey-6 text-subtitle1">
+                    <i class="fas fa-check-circle text-positive q-pr-sm"></i>
+                    High Quality
+                  </p>
+                  <p class="text-grey-6 text-subtitle1">
+                    <i class="fas fa-check-circle text-positive q-pr-sm"></i>
+                    Customer Satisfaction
+                  </p>
+                  <p class="text-grey-6 text-subtitle1">
+                    <i class="fas fa-check-circle text-positive q-pr-sm"></i>
+                    Innovative Solutions
+                  </p>
+                </div>
+                <div>
+                  <q-btn
+                    label="Explore More"
+                    color="positive"
+                    no-caps
+                    unelevated
+                    rounded
+                    size="22px"
+                    class="text-weight-regular"
+                  />
+                </div>
+              </q-card-section>
+              <div class="col-md-2 col-sm-1 col-xs-10"></div>
+            </div>
           </div>
         </div>
       </q-card-section>

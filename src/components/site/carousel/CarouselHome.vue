@@ -26,7 +26,7 @@ const slides = [
 ];
 
 const slide = ref(1);
-const autoplay = ref(false);
+const autoplay = ref(true);
 </script>
 
 <template>
@@ -42,7 +42,7 @@ const autoplay = ref(false);
     transition-next="slide-left"
     transition-duration="1000"
     @mouseenter="autoplay = false"
-    @mouseleave="autoplay = false"
+    @mouseleave="autoplay = true"
     class="window-height"
   >
     <q-carousel-slide
@@ -54,21 +54,21 @@ const autoplay = ref(false);
     >
       <div class="row fit content-center q-px-md" style="background: rgba(0, 0, 0, .1);">
         <div class="col-1"></div>
-        <q-intersection class="col-6" once>
+        <q-intersection class="col-md-7 col-sm-8 col-xs-9" once>
           <Transition appear enter-active-class="animated fadeInDown slower">
             <h1 class="text-white text-bold q-mb-sm">
               {{ slide.title }}
             </h1>
           </Transition>
         </q-intersection>
-        <div class="col-5"></div>
+        <div class="col-md-4 col-sm-3 col-xs-2"></div>
         <div class="col-1"></div>
-        <p class="text-white text-h6 col-7">
+        <h5 class="text-white col-7 no-margin">
           {{ slide.description }}
-        </p>
+        </h5>
         <div class="col-4"></div>
         <div class="col-1"></div>
-        <q-intersection transition="slide-right" transition-duration="500" once class="col-11">
+        <q-intersection transition="slide-right" transition-duration="500" once class="col-11 q-mt-md">
           <q-btn
             label="Read More"
             color="positive"
