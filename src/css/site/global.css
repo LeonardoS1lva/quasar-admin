@@ -34,6 +34,10 @@ p {
   min-height: 180px;
 }
 
+.intersection-200 {
+  min-height: 200px;
+}
+
 .intersection-260 {
   min-height: 260px;
 }
@@ -62,8 +66,16 @@ p {
   border-radius: 10px;
 }
 
-.shadow-card-service {
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+.border-top-left-10 {
+  border-top-left-radius: 10px;
+}
+
+.border-top-right-70 {
+  border-top-right-radius: 70px;
+}
+
+.shadow-card {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08) !important;
 }
 
 .bg-footer {
@@ -103,6 +115,24 @@ p {
 .q-carousel .q-carousel__thumbnail--inactive {
   width: 45px;
   height: 45px;
+}
+
+.filter-1 .q-radio__inner {
+  display: none;
+}
+
+.filter-1 .q-radio__label {
+  margin-left: 15px;
+}
+
+.filter-1:hover .q-radio__label {
+  color: #32C36C;
+  border-bottom: #32C36C 2px solid;
+}
+
+.filter-1:has(.q-radio__inner--truthy) .q-radio__label {
+  color: #32C36C;
+  border-bottom: #32C36C 2px solid;
 }
 
 @media (max-width: 768px) {

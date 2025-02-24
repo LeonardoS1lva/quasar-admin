@@ -1,7 +1,7 @@
 <template>
   <q-card class="my-card border-10 q-my-lg" flat>
     <img :src="imgProject" style="height: 250px" />
-    <div class="absolute-center bg-blue-grey-7 menu-slide">
+    <div class="absolute-center bg-blue-grey-10 menu-slide">
       <div class="flex flex-center full-height opacity-animation">
         <q-btn
         :href="viewProject"
@@ -17,24 +17,22 @@
     </div>
 
     <q-card-section>
-      <div class="text-positive text-h6 text-weight-light">
-        Our Changing Planet
-      </div>
+      <h5 class="text-positive text-weight-light no-margin">
+        {{ titleCard }}
+      </h5>
     </q-card-section>
 
     <div class="q-px-md">
       <q-separator />
     </div>
 
-    <q-card-section class="text-h6">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    <q-card-section class="text-h6 q-pt-sm">
+      {{ descriptionCard }}
     </q-card-section>
   </q-card>
 </template>
 
 <script>
-import { ref } from "vue";
-
 export default {
   props: {
     viewProject: {
@@ -48,6 +46,14 @@ export default {
     imgProject: {
       type: String,
       default: "https://cdn.quasar.dev/img/mountains.jpg",
+    },
+    titleCard: {
+      type: String,
+      default: "Project Title",
+    },
+    descriptionCard: {
+      type: String,
+      default: "We Are pioneers of solar & renewable energy industry",
     },
   },
 };

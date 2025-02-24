@@ -51,10 +51,11 @@ const services = [
     labelButton: "Read more",
   },
 ];
+
 </script>
 
 <template>
-  <div class="q-py-lg bg-grey-2">
+  <div class="q-py-xl bg-grey-2">
     <q-intersection
       transition="slide-up"
       transition-duration="1500"
