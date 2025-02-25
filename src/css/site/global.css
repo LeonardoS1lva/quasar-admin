@@ -74,6 +74,10 @@ p {
   border-top-right-radius: 70px;
 }
 
+.opacity-50 {
+  opacity: 0.5;
+}
+
 .shadow-card {
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.08) !important;
 }
