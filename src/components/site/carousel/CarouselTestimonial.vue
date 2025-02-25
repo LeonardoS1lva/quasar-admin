@@ -8,139 +8,18 @@
       swipeable
       animated
       infinite
+      :autoplay="autoplay"
       ref="carousel"
       min-height="300px"
       class="rounded-borders"
-      @mouseenter="controlVisible = true"
-      @mouseleave="controlVisible = false"
+      @mouseenter="controlVisible = true; autoplay = false"
+      @mouseleave="controlVisible = false; autoplay = true"
     >
       <q-carousel-slide
         v-for="(testimonial, index) in testimonials"
         :key="index"
         :name="index + 1"
-        class="row no-wrap flex-center overflow-hidden q-gutter-x-md"
-      >
-        <div class="opacity-50">
-          <div
-            class="my-card flex-center content-center text-center avatar-container"
-          >
-            <q-avatar size="100px">
-              <img :src="previousTestimonial(index).img" alt="avatar" />
-            </q-avatar>
-            <q-avatar
-              size="40px"
-              font-size="20px"
-              color="positive"
-              text-color="white"
-              icon="fa fa-quote-left"
-              class="quote-icon"
-            />
-          </div>
-          <div class="text-center">
-            <q-card class="my-card shadow-card bg-white border-10" flat>
-              <q-card-section>
-                <h6
-                  class="text-grey-6 no-margin text-center text-weight-regular"
-                >
-                  {{ testimonial.lorem }}
-                </h6>
-              </q-card-section>
-              <q-card-section class="q-pt-sm q-pb-none">
-                <h5 class="text-h6 no-margin">
-                  {{ testimonial.name }}
-                </h5>
-              </q-card-section>
-              <q-card-section class="q-pa-none">
-                <h6 class="text-italic text-subtitle1 text-grey-6 no-margin">
-                  {{ testimonial.profession }}
-                </h6>
-              </q-card-section>
-            </q-card>
-          </div>
-        </div>
-        <div>
-          <div
-            class="my-card flex-center content-center text-center avatar-container"
-          >
-            <q-avatar size="100px">
-              <img :src="testimonial.img" alt="avatar" />
-            </q-avatar>
-            <q-avatar
-              size="40px"
-              font-size="20px"
-              color="positive"
-              text-color="white"
-              icon="fa fa-quote-left"
-              class="quote-icon"
-            />
-          </div>
-          <div class="text-center">
-            <q-card class="my-card shadow-card bg-white border-10" flat>
-              <q-card-section>
-                <h6
-                  class="text-grey-6 no-margin text-center text-weight-regular"
-                >
-                  {{ testimonial.lorem }}
-                </h6>
-              </q-card-section>
-              <q-card-section class="q-pt-sm q-pb-none">
-                <h5 class="text-h6 no-margin">
-                  {{ testimonial.name }}
-                </h5>
-              </q-card-section>
-              <q-card-section class="q-pa-none">
-                <h6 class="text-italic text-subtitle1 text-grey-6 no-margin">
-                  {{ testimonial.profession }}
-                </h6>
-              </q-card-section>
-            </q-card>
-          </div>
-        </div>
-        <div class="opacity-50">
-          <div
-            class="my-card flex-center content-center text-center avatar-container"
-          >
-            <q-avatar size="100px">
-              <img :src="nextTestimonial(index).img" alt="avatar" />
-            </q-avatar>
-            <q-avatar
-              size="40px"
-              font-size="20px"
-              color="positive"
-              text-color="white"
-              icon="fa fa-quote-left"
-              class="quote-icon"
-            />
-          </div>
-          <div class="text-center">
-            <q-card class="my-card shadow-card bg-white border-10" flat>
-              <q-card-section>
-                <h6
-                  class="text-grey-6 no-margin text-center text-weight-regular"
-                >
-                  {{ testimonial.lorem }}
-                </h6>
-              </q-card-section>
-              <q-card-section class="q-pt-sm q-pb-none">
-                <h5 class="text-h6 no-margin">
-                  {{ testimonial.name }}
-                </h5>
-              </q-card-section>
-              <q-card-section class="q-pa-none">
-                <h6 class="text-italic text-subtitle1 text-grey-6 no-margin">
-                  {{ testimonial.profession }}
-                </h6>
-              </q-card-section>
-            </q-card>
-          </div>
-        </div>
-      </q-carousel-slide>
-
-      <!-- <q-carousel-slide
-        v-for="(testimonial, index) in testimonials"
-        :key="index"
-        :name="index + 1"
-        class="column no-wrap flex-center bg-blue"
+        class="column no-wrap flex-center"
       >
         <div
           class="my-card flex-center content-center text-center avatar-container"
@@ -176,7 +55,7 @@
             </q-card-section>
           </q-card>
         </div>
-      </q-carousel-slide> -->
+      </q-carousel-slide>
 
       <template v-slot:control>
         <q-carousel-control
@@ -260,6 +139,7 @@ export default {
 
     return {
       slide: ref(1),
+      autoplay: ref(true),
       testimonials,
       controlVisible: ref(false),
       previousTestimonial,
