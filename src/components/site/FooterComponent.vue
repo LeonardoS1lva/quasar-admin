@@ -1,7 +1,8 @@
 <template>
-  <footer class="bg-footer text-left q-pt-md">
-    <div class="row text-white flex-wrap q-px-xl">
-      <div class="col-12 col-sm-6 col-md-3">
+  <footer class="bg-footer text-left q-pt-xl">
+    <div class="row text-white flex-wrap justify-between">
+      <div class="col-md-1 col-sm-1 col-12"></div>
+      <div class="col-12 col-sm-4 col-md-2">
         <!-- Section Adress Start -->
         <h6 class="q-mb-lg">Andress</h6>
         <p class="q-mb-lg">{{ address.street }}</p>
@@ -24,7 +25,7 @@
         </section>
         <!-- Section Adress End -->
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-4 col-md-2">
         <!-- Quick Links Start -->
         <h6 class="q-mb-lg">Quick Links</h6>
         <!-- Links Start -->
@@ -33,7 +34,7 @@
         </p>
         <!-- Quick Links And Link End -->
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-4 col-md-2">
         <!-- Section Project Start -->
         <h6 class="q-mb-lg">Project Gallery</h6>
         <!-- Projects -->
@@ -41,7 +42,7 @@
         <!-- Section Project End -->
       </div>
         <!-- Section Newsletter Start -->
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-4 col-md-2">
         <h6 class="q-mb-lg">Newsletter</h6>
         <p class="q-mb-lg">
           Dolor amet sit justo amet elitr clita ipsum elitr est.
@@ -53,6 +54,7 @@
         </section>
         <!-- Section Newletter End -->
       </div>
+      <div class="col-12 col-sm-1 col-md-1"></div>
     </div>
     <hr class="q-mt-xl separator-footer"/>
     <aside class="text-center q-pa-md">

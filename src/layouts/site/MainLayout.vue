@@ -1,32 +1,34 @@
 <template>
   <q-layout view="hHr LpR lFf">
-    <q-header reveal class="bg-white shadow-3">
-      <div class="row no-wrap items-center q-pa-lg" v-if="!isMobile">
-        <div class="col-4">
+    <q-header class="bg-white shadow-3">
+      <div class="row no-wrap items-center" style="height: 75px;" v-if="!isMobile">
+        <div class="col-4 q-pa-md">
           <router-link to="/" class="no-decoration">
             <span class="text-primary text-h5">Logo</span>
           </router-link>
         </div>
         <nav
-          class="col-8 row justify-evenly items-center q-gutter-x-xl"
+          class="col-8 row justify-end items-center"
+          style="height: 100%;"
         >
           <router-link
             v-for="link in links"
             :key="link.text"
             :to="link.to"
-            class="text-primary text-bold text-h6 text-uppercase no-decoration"
+            class="text-uppercase no-decoration link-header q-pr-xl"
           >
             {{ link.text }}
           </router-link>
+          <button id="button-header">Get A Quote &rarr;</button>
         </nav>
       </div>
-      <div v-else class="row no-wrap justify-between q-pa-lg">
-        <div class="col-4">
+      <div v-else class="row no-wrap justify-between items-center">
+        <div class="col-4 q-pa-md">
           <router-link to="/" class="no-decoration">
             <span class="text-primary text-h5">Logo</span>
           </router-link>
         </div>
-        <nav>
+        <nav class="q-pa-md">
           <q-btn color="primary" icon="menu">
         <q-menu>
           <q-list style="min-width: 100px" v-for="link in links " :key="link.text">
@@ -64,10 +66,12 @@ export default {
   },
     computed:{
       isMobile(){
-        return this.$q.screen.width < 1050
+        return this.$q.screen.width < 1200
       }
     }
 };
 </script>
 
-<style src="src/css/site/global.css"></style>
+<style src="src/css/site/global.css">
+
+</style>

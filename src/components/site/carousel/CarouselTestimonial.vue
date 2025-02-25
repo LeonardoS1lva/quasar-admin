@@ -8,7 +8,6 @@
           swipeable
           animated
           control-color="black"
-          navigation
           padding
           arrows
           height="300px"
@@ -21,18 +20,6 @@
             </div>
           </q-carousel-slide>
           <q-carousel-slide name="style2" class="column no-wrap flex-center">
-            <q-icon name="person" size="56px" />
-            <div class="q-mt-md text-center">
-              {{ lorem }}
-            </div>
-          </q-carousel-slide>
-          <q-carousel-slide name="style3" class="column no-wrap flex-center">
-            <q-icon name="person" size="56px" />
-            <div class="q-mt-md text-center">
-              {{ lorem }}
-            </div>
-          </q-carousel-slide>
-          <q-carousel-slide name="style4" class="column no-wrap flex-center">
             <q-icon name="person" size="56px" />
             <div class="q-mt-md text-center">
               {{ lorem }}

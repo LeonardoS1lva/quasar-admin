@@ -36,7 +36,7 @@
   width: 80%;
   color: #8a9b9b;
 }
-.link-footer:hover{
+.a-footer:hover{
   color: #fff;
   transform: scale(1.1);
   transition: 0.3s;
@@ -46,4 +46,45 @@
   color: #8a9b9b;
   text-decoration: none;
   transition: 0.5s;
+}
+
+.link-card-time{
+  text-decoration: none;
+  color: #000;
+}
+
+.link-card-time > i{
+  border: 1px solid green;
+  border-radius: 50%;
+  color: green;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.link-card-time > i:hover{
+  border-radius: 50%;
+  background-color: green;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.link-header{
+  color: #132a50;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Open Sans' sans-serif;
+}
+.link-header:hover{
+  color: rgb(18, 199, 18) ;
+  transition: 0.2s;
+}
+#button-header{
+  height: 100%;
+  border: none;
+  outline: #fff;
+  background-color: #35C46E;
+  width: 250px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Open Sans';
 }
