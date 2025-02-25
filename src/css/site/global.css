@@ -1,9 +1,41 @@
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
 .no-decoration {
   text-decoration: none;
 }
 
 .intersection-180 {
   min-height: 180px;
+}
+
+.intersection-200 {
+  min-height: 200px;
 }
 
 .intersection-260 {
@@ -29,25 +61,118 @@
 .intersection-630 {
   min-height: 630px;
 }
-.bg-footer{
+
+.border-10 {
+  border-radius: 10px;
+}
+
+.border-top-left-10 {
+  border-top-left-radius: 10px;
+}
+
+.border-top-right-70 {
+  border-top-right-radius: 70px;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.shadow-card {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08) !important;
+}
+
+.bg-footer {
   background-color: #1a2a36;
 }
-.separator-footer{
+
+.separator-footer {
   width: 80%;
   color: #8a9b9b;
 }
-.a-footer:hover{
+
+.link-footer:hover {
   color: #fff;
   transform: scale(1.1);
   transition: 0.3s;
-  
 }
+
 .a-footer {
   color: #8a9b9b;
   text-decoration: none;
   transition: 0.5s;
 }
 
+.q-carousel .q-carousel__thumbnail {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, .9);
+  transition: 0.7s;
+}
+
+.q-carousel .q-carousel__thumbnail--active {
+  width: 60px;
+  height: 60px;
+}
+
+.q-carousel .q-carousel__thumbnail--inactive {
+  width: 45px;
+  height: 45px;
+}
+
+.filter-1 .q-radio__inner {
+  display: none;
+}
+
+.filter-1 .q-radio__label {
+  margin-left: 15px;
+}
+
+.filter-1:hover .q-radio__label {
+  color: #32C36C;
+  border-bottom: #32C36C 2px solid;
+}
+
+.filter-1:has(.q-radio__inner--truthy) .q-radio__label {
+  color: #32C36C;
+  border-bottom: #32C36C 2px solid;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    line-height: normal;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    line-height: normal;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: normal;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+    line-height: normal;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
 .link-card-time{
   text-decoration: none;
   color: #000;

@@ -16,13 +16,15 @@
               style="max-height: 600px; object-fit: cover"
             />
           </div>
-          <div class="col-12 col-md-6 q-pl-lg">
-            <q-card-section>
+          <div class="col-12 col-md-6">
+            <div class="row">
+              <div class="col-1"></div>
+            <q-card-section class="col-md-9 col-sm-10 col-xs-10 q-pa-none">
               <h6 class="text-positive no-margin q-pt-md">Free Quote</h6>
               <h3 class="no-margin q-py-md">
                 <strong> Get A Free Quote </strong>
               </h3>
-              <p class="text-grey-7 text-subtitle1 q-pt-md">
+              <p class="text-grey-6 text-subtitle1 q-pt-md">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
                 Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
                 sed stet lorem sit clita duo justo erat amet
@@ -102,6 +104,9 @@
                 </q-form>
               </div>
             </q-card-section>
+            <div class="col-md-2 col-sm-1 col-xs-10"></div>
+          </div>
+
           </div>
         </div>
       </q-card-section>
@@ -151,5 +156,3 @@ export default {
   },
 };
 </script>
-
-<style scoped src="../../css/site/global.css"></style>

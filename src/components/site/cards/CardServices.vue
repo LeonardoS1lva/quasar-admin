@@ -1,19 +1,19 @@
 <template>
-  <q-card class="my-card" flat bordered>
-    <q-img :src="imgCard" style="height: 200px;" />
+  <q-card class="my-card border-10 hover-card" flat>
+    <q-img :src="imgCard" style="height: 250px;" />
 
-    <q-card-section>
-      <q-btn
-        fab
+    <q-card-section class="q-pt-none">
+      <q-avatar
         :color="bgIcon"
-        :icon="iconCard"
-        class="absolute"
         :text-color="iconColor"
+        :icon="iconCard"
+        size="100px"
+        class="shadow-2 absolute avatar-icon"
         style="top: 0; left: 12px; transform: translateY(-50%)"
       />
 
-      <div class="row no-wrap items-center">
-        <div class="col text-h6 ellipsis q-pt-md">
+      <div class="row no-wrap items-center q-pt-xl">
+        <div class="col ellipsis q-pt-md text-h5">
           {{ titleCard }}
         </div>
       </div>
@@ -25,8 +25,6 @@
       </div>
     </q-card-section>
 
-    <q-separator />
-
     <q-card-actions>
       <q-btn flat no-caps color="positive">
         {{ labelButton }}
@@ -37,7 +35,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     imgCard: {
@@ -76,4 +73,8 @@ export default {
 .my-card
   width: 100%
   max-width: 400px
+
+.hover-card:hover .avatar-icon
+  background-color: var(--q-positive) !important
+  color: white !important
 </style>

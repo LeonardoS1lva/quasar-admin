@@ -1,12 +1,12 @@
 <template>
   <q-card class="my-card" flat>
     <q-card-section>
-      <div class="flex flex-center">
+      <div class="flex items-center">
         <q-avatar :icon="icon" :color="bgIcon" :text-color="iconColor" :size="sizeIcon" />
         <h3 class="q-mx-md text-bold">{{ number }}</h3>
       </div>
-      <p class="text-h6">{{ title }}</p>
-      <span class="text-grey-7">{{ description }}</span>
+      <p class="text-h6 text-bold">{{ title }}</p>
+      <span class="text-grey-6 text-subtitle1">{{ description }}</span>
     </q-card-section>
   </q-card>
 </template>

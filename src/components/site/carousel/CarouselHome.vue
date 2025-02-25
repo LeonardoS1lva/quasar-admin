@@ -50,21 +50,25 @@ const autoplay = ref(true);
       :key="index"
       :name="index + 1"
       :img-src="slide.imgSrc"
+      class="q-pa-none"
     >
-      <div class="q-pa-xl row">
-        <q-intersection class="col-8" once>
+      <div class="row fit content-center q-px-md" style="background: rgba(0, 0, 0, .1);">
+        <div class="col-1"></div>
+        <q-intersection class="col-md-7 col-sm-8 col-xs-9" once>
           <Transition appear enter-active-class="animated fadeInDown slower">
             <h1 class="text-white text-bold q-mb-sm">
               {{ slide.title }}
             </h1>
           </Transition>
         </q-intersection>
-        <div class="col-4"></div>
-        <p class="text-white text-h6 col-7">
+        <div class="col-md-4 col-sm-3 col-xs-2"></div>
+        <div class="col-1"></div>
+        <h5 class="text-white col-7 no-margin">
           {{ slide.description }}
-        </p>
-        <div class="col-5"></div>
-        <q-intersection transition="slide-right" transition-duration="500" once>
+        </h5>
+        <div class="col-4"></div>
+        <div class="col-1"></div>
+        <q-intersection transition="slide-right" transition-duration="500" once class="col-11 q-mt-md">
           <q-btn
             label="Read More"
             color="positive"
