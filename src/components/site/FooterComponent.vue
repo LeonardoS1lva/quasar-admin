@@ -1,7 +1,8 @@
 <template>
-  <footer class="bg-footer text-left q-pt-md">
-    <div class="row text-white flex-wrap q-px-xl">
-      <div class="col-12 col-sm-6 col-md-3">
+  <footer class="bg-footer text-left q-pt-xl">
+    <div class="row text-white flex-wrap justify-between">
+      <div class="col-md-1 col-sm-1 col-12"></div>
+      <div class="col-12 col-sm-4 col-md-2">
         <!-- Section Adress Start -->
         <h6 class="q-mb-lg">Andress</h6>
         <p class="q-mb-lg">{{ address.street }}</p>
@@ -24,16 +25,16 @@
         </section>
         <!-- Section Adress End -->
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-4 col-md-2">
         <!-- Quick Links Start -->
         <h6 class="q-mb-lg">Quick Links</h6>
         <!-- Links Start -->
          <p class="q-mb-lg link-footer" v-for="(link, index) in links" :key="index">
-          <router-link :to="link.to" class="a-footer">{{ link.label }}</router-link>
+          <router-link :to="link.to" class="a-footer"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#fff"><path d="M522-480 333-669l51-51 240 240-240 240-51-51 189-189Z"/></svg> {{ link.label }}</router-link>
         </p>
         <!-- Quick Links And Link End -->
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-4 col-md-2">
         <!-- Section Project Start -->
         <h6 class="q-mb-lg">Project Gallery</h6>
         <!-- Projects -->
@@ -41,7 +42,7 @@
         <!-- Section Project End -->
       </div>
         <!-- Section Newsletter Start -->
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-4 col-md-2">
         <h6 class="q-mb-lg">Newsletter</h6>
         <p class="q-mb-lg">
           Dolor amet sit justo amet elitr clita ipsum elitr est.
@@ -53,6 +54,7 @@
         </section>
         <!-- Section Newletter End -->
       </div>
+      <div class="col-12 col-sm-1 col-md-1"></div>
     </div>
     <hr class="q-mt-xl separator-footer"/>
     <aside class="text-center q-pa-md">
