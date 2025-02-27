@@ -91,7 +91,14 @@ p {
   color: #8a9b9b;
 }
 
-.link-footer:hover {
+#header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.a-footer:hover {
   color: #fff;
   transform: scale(1.1);
   transition: 0.3s;
@@ -212,4 +219,10 @@ p {
   color: #fff;
   font-size: 1rem;
   font-family: 'Open Sans';
+  transition: 0.3s;
+}
+
+#button-header:hover{
+  transition: 0.3s;
+  background-color: #35c46ea8;
 }
